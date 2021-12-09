@@ -11,10 +11,11 @@
     <p>Included in the styleguide is a palette of colours.</p>
     <p>The primary colour is used for interactive elements, such as links and buttons. The secondary, success, warning,
         and danger colours are used to give more context to UI elements and actions.</p>
+    <p>This colour map is used for colour variations for various components like alerts, tags, tiles, table rows and badges.</p>
+    <p>All the colours are accesible with <code>.bg-COLOR</code> and <code>.text-COLOR</code> classes to provide background colour and text colour values respectively.</p>
     <hr>
     <div class="demo">
-
-        <div class="cols-of-150 ">
+        <div class="cols-of-150">
             <div class="colour-block">
                 <div class="bg-primary"></div>
                 <p class="text-primary">Primary</p>
@@ -47,8 +48,8 @@
                 <p class="text-dark-gray">Dark Gray</p>
             </div>
             <div class="colour-block">
-                <div class="bg-black"></div>
-                <p class="text-black">Black</p>
+                <div class="bg-blackest"></div>
+                <p class="text-blackest">Black</p>
             </div>
             <div class="colour-block bg-dark-gray">
                 <div class="bg-light-gray"></div>
@@ -58,9 +59,9 @@
                 <div class="bg-off-white"></div>
                 <p class="text-off-white">Off White</p>
             </div>
-            <div class="colour-block bg-black">
-                <div class="bg-white"></div>
-                <p class="text-white">White</p>
+            <div class="colour-block bg-blackest">
+                <div class="bg-whitest"></div>
+                <p class="text-whitest">White</p>
             </div>
         </div>
     </div>

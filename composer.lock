@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1999b39f16a4f7df5dd5c905a14215e3",
+    "content-hash": "e44c21f0dd43f743a19c38c78daf7a73",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -124,16 +124,16 @@
         },
         {
             "name": "dcodegroup/ui-presets",
-            "version": "1.05",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dcodegroup/dcode-ui-presets.git",
-                "reference": "9ee6dc6c80d1e9d29057ab4066739ba655fd58d2"
+                "reference": "6725b81af8db3468738048ca4f5440a02fecede4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dcodegroup/dcode-ui-presets/zipball/9ee6dc6c80d1e9d29057ab4066739ba655fd58d2",
-                "reference": "9ee6dc6c80d1e9d29057ab4066739ba655fd58d2",
+                "url": "https://api.github.com/repos/dcodegroup/dcode-ui-presets/zipball/6725b81af8db3468738048ca4f5440a02fecede4",
+                "reference": "6725b81af8db3468738048ca4f5440a02fecede4",
                 "shasum": ""
             },
             "require": {
@@ -174,9 +174,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dcodegroup/dcode-ui-presets/issues",
-                "source": "https://github.com/dcodegroup/dcode-ui-presets/tree/1.05"
+                "source": "https://github.com/dcodegroup/dcode-ui-presets/tree/1.1.0"
             },
-            "time": "2021-09-06T03:48:02+00:00"
+            "time": "2021-12-09T04:41:17+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

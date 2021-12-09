@@ -5,14 +5,12 @@
     <aside>
         <header>
             <img src="{{ asset('/imgs/logos/dcode.svg') }}" alt="Dcode logo" width="50"/>
-            <h1>Dcode Styleguide</h1>
+            <h1>{{ config('app.name') }} Styleguide</h1>
         </header>
         <nav>
             <ul class="vertical">
-                {{-- <li><a href="">Getting Started</a><li> --}}
-                {{-- <li><a href="">Design Guidelines</a><li> --}}
                 <li>
-                    <a href="{{ route('styleguide.globals.index') }}">Globals</a>
+                    <button>Globals</button>
                     <ul>
                         <li>
                             <a href="{{ route('styleguide.globals.buttons') }}">Buttons</a>
@@ -38,30 +36,34 @@
                             <a href="{{ route('styleguide.components.cards') }}">Cards</a>
                         </li>
                         <li>
-                            <a href="{{ route('styleguide.components.forms') }}">Forms</a>
-                            <ul>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.checkboxes') }}">Checkboxes</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.checkbox-btns') }}">Checkbox Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.checkbox-toggles') }}">Checkbox Toggles</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.checkbox-btn-groups') }}">Checkbox Button Groups</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.search-inputs') }}">Search Inputs</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('styleguide.components.forms.select-filters') }}">Select Filters</a>
-                                </li>
-                                {{-- <li>
-                                    <a href="{{ route('styleguide.components.forms.date-pickers') }}">Date Pickers</a>
-                                </li> --}}
-                            </ul>
+                            <a href="{{ route('styleguide.components.forms') }}">Forms</a> 
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.checkboxes') }}">Checkboxes</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.checkbox-btns') }}">Checkbox Buttons</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.checkbox-toggles') }}">Checkbox Toggles</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.checkbox-btn-groups') }}">Checkbox Button Groups</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.date-pickers') }}">Date Pickers</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.search-inputs') }}">Search Inputs</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.select-filters') }}">Select Filters</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.modals') }}">Modals</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.forms.multi-select') }}">Multi Selects</a>
                         </li>
                         <li>
                             <a href="{{ route('styleguide.components.navs') }}">Navigation</a>
@@ -77,6 +79,9 @@
                         </li>
                         <li>
                             <a href="{{ route('styleguide.components.tiles') }}">Tiles</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('styleguide.components.side-panels') }}">Side Panels</a>
                         </li>
                     </ul>
                 </li>
@@ -106,4 +111,6 @@
         @endisset
     </section>
 </main>
+ <modal></modal>
+<side-panel></side-panel>
 @endsection
