@@ -16,12 +16,6 @@
         <script src="{{ url(mix('js/app.js')) }}" defer></script>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <!-- LARAVEL Kanopi Sidebar Tag -->
-        <script>
-            (function(p,r,o,a,c,t,i,v,e){v=p.createElement(r);e=p.currentScript;v.async=1;v.src=o+'?client='+a+'&env='+c+'&project='+(t!==null?t:'');e.parentNode.insertBefore(v,e);})
-            (document, 'script', 'https://kanopi.live/embed.js', 'KPI-23', '{{ config('app.env') }}', 1028);
-        </script>
-        <!-- /LARAVEL Kanopi Sidebar Tag laravel -->
     </head>
     <body {{isset($bodyId) ? "id=$bodyId" : null }}>
         <div id="app">

@@ -1,5 +1,5 @@
-@use '../../../base' as *;
 @use "../branding" as *;
+@use '../../../preset/layouts.scss' as *;
 
 #styleguide-layout  {
     .six-by-three-grid {
@@ -19,4 +19,3 @@
         }
     }
 }
-
