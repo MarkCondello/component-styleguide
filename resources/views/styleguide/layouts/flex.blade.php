@@ -67,7 +67,7 @@
     <p>The breakpoint added to flex cols will set the min width value for the mixin. Below is the @flex-cols settings used for the demo:</p>
     <code-block 
         code-content=".flex-cols {
-    @include flex-cols(xl);
+    @\include flex-cols(xl);
     > div {
         background-color: \$dcode-turquoise;
         border: 1px solid #fff;
