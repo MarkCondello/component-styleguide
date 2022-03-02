@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-    'heading' => "Grids",
-    'devReady' => true,
-])
-
-<div class="content">
+<div >
     <h3>About grids</h3>
     <p>The mixin parameters for using the grids mixin are: <code>grids($cols: 1, $colGap : 0px,  $rowGap : 0px, $rows: 0)</code></p>
     <hr>

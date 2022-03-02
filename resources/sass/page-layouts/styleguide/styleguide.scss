@@ -14,6 +14,7 @@
         grid-template-areas: "aside content";
     }
     > header {
+        border-bottom: 1px solid #DFE5EB;
         padding: 1rem 0;
         > aside {
             @include align-center;
@@ -27,12 +28,21 @@
                 font-weight: 700;
             }
         }
-        > menu {
+        > div {
             padding-right: 25px;
-            ul {
-                li {
-                    a {
-                        color: $top-menu-color;
+            display: grid;
+            grid-template-columns: 1fr 230px;
+            grid-template-rows: auto;
+            grid-template-areas: "menu search";
+            menu {
+                border-left: 1px solid $separator;
+                border-right: 1px solid $separator;
+                margin:0;
+                ul {
+                    li {
+                        a {
+                            color: $top-menu-color;
+                        }
                     }
                 }
             }
@@ -40,99 +50,86 @@
     }
     > main {
         min-height: 100vh;
-        > aside {
-            background-color: $sidebar-bg;
-            border-right: 1px solid #E1E7EC;
-            padding-left: 20px;
+        aside {
             padding-top: 30px;
-            //branding overwrites for vertical menu
             ul {
                 @include reset-ul;
             }
-                > ul > li {
-                    padding-left: 0;
-                    padding-right: 0;
-                    margin: 0;
-                    > button {
-                        @include reset-btn;
-                        font-weight: 600;
-                        padding: 0.5rem 0.75rem;
-                        text-transform: uppercase;
+            > ul > li {
+                padding-left: 0;
+                padding-right: 0;
+                margin: 0;
+                margin-bottom: 1.5rem;
+                > button {
+                    @include reset-btn;
+                    font-weight: 600;
+                    padding: 0.5rem 0.75rem;
+                    text-transform: uppercase;
+                }
+                a,
+                button {
+                    color: $sidebar-menu-color;
+                }
+                > ul {
+                    background-color: transparent;
+                    margin-bottom: 1rem;
+                    opacity: 1;
+                    height: auto;
+                    > li {
+                        text-align: left;
                     }
-                    a,
-                    button {
-                        color: $sidebar-menu-color;
-                    }
-                    > ul {
-                        background-color: transparent;
-                        margin-bottom: 1rem;
-                        opacity: 1;
-                        height: auto;
-                        > li {
-                            text-align: left;
-                        }
-                        a {
-                            border: 1px solid transparent;
+                    a {
+                        border: 1px solid transparent;
+                        border-right: none;
+                        display: block;
+                        padding: .7rem .75rem;
+                        text-decoration: none;
+                        width: 100%;
+                        &.active,
+                        &:hover {
+                            background-color: $white;
+                            border: 1px solid $main-bg;
                             border-right: none;
-                            display: block;
-                            padding: .7rem .75rem;
-                            text-decoration: none;
-                            width: 100%;
-                            &.active,
-                            &:hover {
-                                background-color: $white;
-                                border: 1px solid $main-bg;
-                                border-right: none;
-                                color: $top-menu-color;
-                            }
+                            color: $top-menu-color;
                         }
-                    }
-                }
-           
-        }
-
-        > section {
-            >header {
-                background: $dcode-grey;
-                padding: 1rem 2rem;
-
-                h2 {
-                    font-size: 3rem;
-                    line-height: 1;
-                    margin: 0;
-                }
-
-                ul {
-                    list-style: none;
-                    display: inline-flex;
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        font-size: 14px;
                     }
                 }
             }
+        }
+        > aside {
+           
+            background-color: $sidebar-bg;
+            border-right: 1px solid #E1E7EC;
+            padding-left: 20px;
 
-            >.content {
+        }
+        > section {
+            display: grid;
+            grid-template-columns: 1fr 230px;
+            grid-template-rows: auto;
+            grid-template-areas: "article aside";
+            padding-right: 25px;
+            > article {
                 padding: 3rem 2rem;
-
                 hr:not(.actions hr) {
                     margin: 3rem 0;
                 }
-
                 .demo {
                     border: 5px solid $dcode-grey;
                     padding: 1.5rem;
-
                     pre {
                         margin: 0;
-
                         code {
                             font-family: monospace;
                             font-size: 1rem;
                         }
                     }
+                }
+            }
+            > aside {
+                > ul {
+                    border-left: 1px solid $separator;
+                    padding-left: 1rem;
                 }
             }
         }

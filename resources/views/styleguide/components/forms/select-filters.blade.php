@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Select Filters",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Select Filters</h3>
         <p>A select filter, unlike its name suggests, does not use a select input, but rather a hidden input with a button to trigger a menu drop down. Users can select a menu item to change the value of the hidden input field.</p>
         <p>A simple Javascript example is used to demonstrate this functionality.</p>

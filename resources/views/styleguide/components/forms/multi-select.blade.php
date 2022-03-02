@@ -14,11 +14,7 @@
     ],
 ]))
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Multi Selects",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Vue Multi Selects</h3>
         <p>We have created a wrapper for the Vue Selectize which has a hidden input to help with sending form submissions in blades. More details about the package can be found <a href="https://github.com/isneezy/vue-selectize" target="blank">here</a>.</p>
         <hr>

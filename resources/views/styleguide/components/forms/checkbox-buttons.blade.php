@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Checkbox Buttons",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Checkbox Buttons</h3>
         <p>Adding the css class <code>.checkbox-btn</code> to a container div for child checkbox inputs and span elements will generate the checkbox button.</p>
         <p>The background colour for the element can be changed by including a <code>.btn-COLOR</code> class to the label container.</p>

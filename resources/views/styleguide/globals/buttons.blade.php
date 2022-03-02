@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Buttons",
-'devReady' => false,
-])
-
-<div class="content">
+<div>
     <h3>About buttons</h3>
     <p>Buttons should be used in situations where users might need to:</p>
         <ul>
@@ -45,6 +40,7 @@
             <a href="#" class="button sml">Small Button </a>
         </div>
     </div>
+    <code-block code-content='<a href="#" class="button primary">Button Primary</a>'></code-block>
     <hr>
     <h3>Buttons with Icons</h3>
     <p>Included as an option is the ability to add icons to buttons using the <code>icon-right</code> or <code>icon-left</code> css classes. Nesting either an <code> &lt;i&gt;, &lt;span&gt; or &lt;svg&gt; </code> element, to display the icon is supported.</p>
@@ -68,6 +64,12 @@
             </svg>
         </a>
     </div>
+    <code-block code-content='<a href="#" class="button primary icon-left">Add List <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path
+            d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" />
+    </svg>
+</a>'></code-block>
+
     <hr>
     <h3>Button groups</h3>
     <p>These can be created using a container with the class of <code>.btn-group</code> and works with both .button and .checkbox-btn elements.</p>
@@ -79,7 +81,24 @@
             <a href="#" class="button success">Button Success</a>
         </div>
     </div>
+    <code-block code-content='<div class="btn-group">
+    <a href="#" class="button">Generic button</a>
+    <a href="#" class="button primary">Button Primary</a>
+    <a href="#" class="button secondary">Button Secondary</a>
+    <a href="#" class="button success">Button Success</a>
+</div>'></code-block>
 </div>
+@endsection
+
+@section('contentLinks')
+    <ul>
+        <li>
+            <button>On this page</button>
+            <ul>
+                <li><a href="#">About Buttons</a></li>
+            </ul>
+        </li>
+    </ul>
 @endsection
 
 {{-- ToDo: other features worth including: https://www.lightningdesignsystem.com/components/buttons/ 

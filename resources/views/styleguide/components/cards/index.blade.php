@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Cards",
-'devReady' => false,
-])
-<div class="content">
+<div >
     <h3>Cards</h3>
     <p>Cards can be included using the <code>.card</code> css class.</p>
     <p>Including a <code>&lt;header&gt;</code> element will produce a flex container with space-between and align-center flex settings.</p>

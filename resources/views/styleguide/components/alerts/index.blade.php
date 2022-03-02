@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Alerts",
-        'devReady' => false,
-    ])
-
-    <div class="content">
+    <div >
         <h3>Alerts</h3>
         <p>Adding an <code>.alert</code> class will create a flex container which is align-center justify-content properties.</p>
         <p>Using the <code>.bg-COLOR </code> classes provides the background-colour and border-color to the container element and the button color as well.</p>
@@ -50,7 +45,7 @@
             </header>
         </div>
         <code-block 
-        code-content='<header class="alert primary">
+            code-content='<header class="alert primary">
     <div>
         <span>&#8505;</span>
         <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
@@ -58,6 +53,5 @@
     <button>&#9747;</button>
 </header>
         '></code-block>
-       
     </div>
 @endsection

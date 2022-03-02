@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-        'heading' => "Tiles",
-        'devReady' => false,
-])
-
-<div class="content">
+<div >
     <h3>Tiles</h3>
     <p>Adding an <code>.tile</code> class will create a flex container which is align-center justify-content properties.
     </p>

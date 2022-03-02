@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-    'heading' => "Flex Cols",
-    'devReady' => false,
-])
-
-<div class="content">
+<div >
     <h3>About flex cols</h3>
     <p>A helper mixin for generating the flex columns is available called <code>flex-cols($breakpoint: xs);</code></p>
     <p>By defining the columns in a $columns map, we can create flex layouts with predefined columns.</p>
