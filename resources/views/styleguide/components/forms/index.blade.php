@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Forms",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Generic Forms</h3>
         <p>Forms should not have classes or styles applied to them and should be kept agnostic.</p>
         <p><code>&lt;div&gt;</code> tags should wrap a label and input as a container.</p>

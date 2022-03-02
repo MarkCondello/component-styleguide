@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Tags",
-'devReady' => false,
-])
-
-<div class="content">
+<div >
     <h3>About Tags</h3>
     <p>Tags are useful inline elements that can be used to explain sections or to attach metadata. You can attach a tag that indicates when something needs attention.</p>
     <p>Tags are created with the <code>.tag</code> class. Using the <code>.bg-COLOR </code> and or <code>.text-COLOR</code> classes provides the background colour to these badges.</p>

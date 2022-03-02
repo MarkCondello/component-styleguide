@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Checkbox",
-        'devReady' => true,
-    ])
-    <div class="content">
+    <div >
         <h3>Generic Checkboxes</h3>
         <p></p>
         <hr>

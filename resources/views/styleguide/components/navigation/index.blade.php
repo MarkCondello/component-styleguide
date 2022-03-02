@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Navigation",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Generic Menus</h3>
         <p>All <code>ul</code> elements contained within a <code>nav</code> or <code>menu</code> element will have the menu styles applied to it. Currently the generic menu supports sub menu items, not sub subs or deeper nestings.</p>
         <p>Top level menus with sub menus which are not navigation links should be <code>button</code> elements rather than <code>a</code> tags which link to nothing. Menus which are not part of the main navigation like ellipsis menus, should use the <code>menu</code> element rather than the <code>nav</code> element.</p>   

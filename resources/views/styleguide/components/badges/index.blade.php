@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Badges",
-'devReady' => false,
-])
-<div class="content">
+<div >
     <h3>Generic Badges</h3>
     <p>Generic badges are created with the <code>.badge</code> class.</p>
     <p>Using the <code>.bg-COLOR </code> and or <code>.text-COLOR</code> classes provides the background colour to these badges.</p>

@@ -1,7 +1,7 @@
 @use "../branding" as *;
 @use '../../../preset/layouts.scss' as *;
 
-#styleguide-layout  {
+#styleguide  {
     .six-by-three-grid {
         @include grids(6, 1rem, 1rem, 3);
         > div {
