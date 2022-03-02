@@ -16,12 +16,6 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<job-panel-trigger></job-panel-trigger>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block code-content='<job-panel-trigger></job-panel-trigger>'></code-block>
     </div>
 @endsection

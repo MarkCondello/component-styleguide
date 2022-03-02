@@ -20,17 +20,12 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<form action=\"#\" method=\"post\">
-                        <label for=\"mail-me\" class=\"checkbox\">
-                            <input type=\"checkbox\" id=\"mail-me\" />
-                            <span>Include marketing</span>
-                        </label>
-                    </form>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block 
+        code-content='<form action="#" method="post">
+    <label for="mail-me" class="checkbox">
+        <input type="checkbox" id="mail-me" />
+        <span>Include marketing</span>
+    </label>
+</form>'></code-block>
     </div>
 @endsection

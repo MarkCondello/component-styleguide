@@ -43,39 +43,35 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-        <pre>
-            <code>
-                {{ "<div class=\"card\">
-                    <header>
-                        <div>
-                            <span class=\"badge bg-primary\"></span>
-                            <p>Card title</p> 
-                        </div>
-                        <nav> 
-                            <ul>
-                                <li>
-                                    <button><span>...</span></button>
-                                    <ul class=\"right\">
-                                        <li><a href=\"#\">menu 1</a></li>  
-                                        <li><a href=\"#\">menu 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
-                    <div class=\"tile\">
-                        <span class=\"badge bg-primary box\">S</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, delectus?</p>
-                    </div>
-                    <div class=\"tile\">
-                        <span class=\"badge bg-success box\">G</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, delectus?</p>
-                    </div>
-                </div>" }}
-            </code>
-        </pre>
+    <code-block 
+        code-content='<div class="card">
+    <header>
+        <div>
+            <span class="badge bg-primary"></span>
+            <p>Card title</p> 
+        </div>
+        <nav> 
+            <ul>
+                <li>
+                    <button><span>...</span></button>
+                    <ul class="right">
+                        <li><a href="#">menu 1</a></li>  
+                        <li><a href="#">menu 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tile">
+        <span class="badge bg-primary box">S</span>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, delectus?</p>
     </div>
+    <div class="tile">
+        <span class="badge bg-success box">G</span>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, delectus?</p>
+    </div>
+</div>'
+    ></code-block> 
     <hr>
     <h3>Selected Card</h3>
     <p>Cards can  have a <code>.selected</code> css class included to add a dark border and heading.</p>

@@ -9,8 +9,7 @@
                 </svg>
             </button>
         </header>
-        <prism-editor class="code-editor" v-model="code" :highlight="highlighter" line-numbers />
-        <input type="hidden" :value="code" ref="codeContent" />
+        <prism-editor ref="editor" class="code-editor" v-model="code" :highlight="highlighter" line-numbers />
     </article>
 </template>
 
@@ -43,12 +42,10 @@ import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles
         return highlight(code, languages.js); // languages.<insert language> to return html with markup
       },
       handleCopy() {
-        const codeContent = this.$refs.codeContent
-        codeContent.setAttribute('type', 'text')
+        const codeContent = this.$refs.editor.$refs.textarea
         codeContent.select()
         let copied = document.execCommand('copy')
         copied ? this.copyStatus = 'Copied' : this.copyStatus = 'Cant copy content'
-        codeContent.setAttribute('type', 'hidden')
         window.getSelection().removeAllRanges()
         setTimeout(()=>{
             this.copyStatus = null

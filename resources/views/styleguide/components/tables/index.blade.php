@@ -57,54 +57,48 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-      <pre>
-        <code>
-          &lt;table&gt;
-          &lt;thead&gt;
-            &lt;tr&gt;
-              &lt;th&gt;Name&lt;&#47;th&gt;
-              &lt;th&gt;User&lt;&#47;th&gt;
-              &lt;th&gt;Latitude&lt;&#47;th&gt;
-              &lt;th&gt;Longitude&lt;&#47;th&gt;
-              &lt;th&gt;Last Record&lt;&#47;th&gt;
-              &lt;th&gt;Active&lt;&#47;th&gt;
-              &lt;th&gt;Last Modified By&lt;&#47;th&gt;
-              &lt;th&gt;Created At&lt;&#47;th&gt;
-              &lt;th&gt;Notes&lt;&#47;th&gt;
-              &lt;th&gt;&nbsp;&lt;&#47;th&gt;
-            &lt;&#47;tr&gt;
-          &lt;&#47;thead&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td data-header="Name"&gt;123abc&lt;&#47;td&gt;
-              &lt;td data-header="User"&gt;John Doe&lt;&#47;td&gt;
-              &lt;td data-header="Latitude"&gt; -37.123309&lt;&#47;td&gt;
-              &lt;td data-header="Longitude"&gt; 140.354676&lt;&#47;td&gt;
-              &lt;td data-header="Last Record"&gt;26/08/2021 11:39&lt;&#47;td&gt;
-              &lt;td data-header="Active"&gt;Y&lt;&#47;td&gt;
-              &lt;td data-header="Last Modified By"&gt;Jane Doe&lt;&#47;td&gt;
-              &lt;td data-header="Created At"&gt;02/03/2020 20:30&lt;&#47;td&gt;
-              &lt;td data-header="Notes"&gt;Notes&lt;&#47;a&gt;&lt;&#47;td&gt;
-              &lt;td class="actions"&gt; ... &lt;&#47;td&gt;
-            &lt;&#47;tr&gt;
-            &lt;tr&gt;
-              &lt;td data-header="Name"&gt;abc123&lt;&#47;td&gt;
-              &lt;td data-header="User"&gt;Jane Doe&lt;&#47;td&gt;
-              &lt;td data-header="Latitude"&gt; -37.123309&lt;&#47;td&gt;
-              &lt;td data-header="Longitude"&gt; 140.354676&lt;&#47;td&gt;
-              &lt;td data-header="Last Record"&gt;26/08/2021 11:39&lt;&#47;td&gt;
-              &lt;td data-header="Active"&gt;Y&lt;&#47;td&gt;
-              &lt;td data-header="Last Modified By"&gt;John Doe&lt;&#47;td&gt;
-              &lt;td data-header="Created At"&gt;02/03/2020 20:30&lt;&#47;td&gt;
-              &lt;td data-header="Notes"&gt;Notes&lt;&#47;a&gt;&lt;&#47;td&gt;
-              &lt;td class="actions"&gt; ... &lt;&#47;td&gt;
-            &lt;&#47;tr&gt;
-          &lt;&#47;tbody&gt;
-        &lt;&#47;table&gt;
-      </code>
-    </pre>
-  </div>
+    <code-block code-content='<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Last Record</th>
+      <th>Active</th>
+      <th>Last Modified By</th>
+      <th>Created At</th>
+      <th>Notes</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-header="Name">123abc</td>
+      <td data-header="User">John Doe</td>
+      <td data-header="Latitude"> -37.123309</td>
+      <td data-header="Longitude"> 140.354676</td>
+      <td data-header="Last Record">26/08/2021 11:39</td>
+      <td data-header="Active">Y</td>
+      <td data-header="Last Modified By">Jane Doe</td>
+      <td data-header="Created At">02/03/2020 20:30</td>
+      <td data-header="Notes">Notes</a></td>
+      <td class="actions"> ... </td>
+    </tr>
+    <tr>
+      <td data-header="Name">abc123</td>
+      <td data-header="User">Jane Doe</td>
+      <td data-header="Latitude"> -37.123309</td>
+      <td data-header="Longitude"> 140.354676</td>
+      <td data-header="Last Record">26/08/2021 11:39</td>
+      <td data-header="Active">Y</td>
+      <td data-header="Last Modified By">John Doe</td>
+      <td data-header="Created At">02/03/2020 20:30</td>
+      <td data-header="Notes">Notes</a></td>
+      <td class="actions"> ... </td>
+    </tr>
+  </tbody>
+</table>'></code-block>
   <hr>
   <h3>Striped Tables</h3>
   <p>Striped tables are set by adding the <code>.striped</code> class to the table element.</p>
