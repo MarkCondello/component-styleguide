@@ -35,16 +35,9 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-      <pre>
-        <code>
-           {{ 
-            "<p aria-describedby=\"genericTag\"><b>Note:</b> This task needs to be actioned</p>
-            <div class=\"tag\" id=\"genericTag\">Generic tag</div>"
-            }}
-        </code>
-      </pre>
-    </div>
+    <code-block 
+    code-content='<p aria-describedby="genericTag"><b>Note:</b> This task needs to be actioned</p>
+<div class="tag" id="genericTag">Generic tag</div>'></code-block>
     <hr>
     <h3>Hollow Tags</h3>
     <p>Using the <code>.hollow-COLOR </code>classes provides the background colour to these badges.</p>

@@ -16,12 +16,6 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<delete-modal-trigger></delete-modal-trigger>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block code-content='<delete-modal-trigger></delete-modal-trigger>'></code-block>
     </div>
 @endsection

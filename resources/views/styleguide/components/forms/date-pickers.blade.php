@@ -15,13 +15,7 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<v-date-picker name=\"due_date\" value=\"{\{ Carbon\Carbon::now() }\}\"></v-date-picker>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block code-content='<v-date-picker name="due_date" value="\{\{ Carbon\Carbon::now() \}\}"></v-date-picker>'></code-block>
     </div>
 @endsection
 

@@ -49,20 +49,15 @@
                 <button>&#9747;</button>
             </header>
         </div>
-        <hr>
-        <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<header class=\"alert primary\">
-                        <div>
-                            <span>&#8505;</span>
-                            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
-                        </div>
-                        <button>&#9747;</button>
-                    </header>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block 
+        code-content='<header class="alert primary">
+    <div>
+        <span>&#8505;</span>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
+    </div>
+    <button>&#9747;</button>
+</header>
+        '></code-block>
+       
     </div>
 @endsection
