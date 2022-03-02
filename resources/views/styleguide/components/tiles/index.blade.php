@@ -36,16 +36,8 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-      <pre>
-        <code>
-           {{ 
-            "<div class=\"tile\">
-                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
-            </div>"
-            }}
-        </code>
-      </pre>
-    </div>
+    <code-block code-content='<div class="tile">
+    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
+</div>'></code-block>
 </div>
 @endsection

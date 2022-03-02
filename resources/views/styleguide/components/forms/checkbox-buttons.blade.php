@@ -26,22 +26,18 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<form action=\"#\" method=\"post\">
-                        <label for=\"option-one\" class=\"checkbox-btn\">
-                            <input type=\"checkbox\" id=\"option-one\" />
-                            <span>Option 1</span>
-                        </label>
-                        <label for=\"option-two\" class=\"checkbox-btn btn-warning\">
-                            <input type=\"checkbox\" id=\"option-two\" />
-                            <span>Option 2</span>
-                        </label>
-                    </form>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block 
+            code-content='<form action="#" method="post">
+    <label for="option-one" class="checkbox-btn">
+        <input type="checkbox" id="option-one" />
+        <span>Option 1</span>
+    </label>
+    <label for="option-two" class="checkbox-btn btn-warning">
+        <input type="checkbox" id="option-two" />
+        <span>Option 2</span>
+    </label>
+</form>
+'></code-block>
     </div>
 @endsection
 

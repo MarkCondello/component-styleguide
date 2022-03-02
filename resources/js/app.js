@@ -18,6 +18,7 @@ import VSelect from "./vue/components/UI/VSelect.vue";
 import DeleteModal from './vue/components/modals/DeleteModal.vue';
 import DeleteModalTrigger from './vue/styleguide/DeleteModalTrigger.vue';
 import JobPanelTrigger from './vue/styleguide/JobPanelTrigger.vue';
+import CodeBlock from './vue/styleguide/CodeBlock.vue';
 
 // Vue.component("Icon", Icon);
 // Vue.component("InputWrapper", InputWrapper);
@@ -31,6 +32,7 @@ Vue.component("BaseTable", BaseTable);
 Vue.component("SidePanel", SidePanel);
 Vue.component("SidePanelJobCreate", SidePanelJobCreate);
 Vue.component("JobPanelTrigger", JobPanelTrigger);
+Vue.component('CodeBlock', CodeBlock);
 
 window.onload = (event) => {
     window.pal = new WindowPal(window);

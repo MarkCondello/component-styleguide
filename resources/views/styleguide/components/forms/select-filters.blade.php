@@ -59,38 +59,30 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-             <pre>
-                 <code>
-                     {{ "<div class=\"select-filter-input\">
-                        <p>
-                            <label for=\"search_by\">Filter:</label>
-                            <span>N/A</span>
-                            <input type=\"hidden\" name=\"search_by\" id=\"sort_by\" value=\"Date\">
-                            <button type=\"button\">
-                                <svg role=\"img\"  viewBox=\"0 0 448 512\">
-                                    <path fill=\"currentColor\" d=\"M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 
-                                    0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 
-                                    24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569
-                                    9.372-33.942 0z\">
-                                    </path>
-                                </svg>
-                            </button>
-                        </p>
-                        <ul>
-                            <li>
-                                <button>Active</button>
-                            </li>
-                            <li>
-                                <button>Disabled</button>
-                            </li>
-                            <li>
-                                <button>Draft</button>
-                            </li>
-                        </ul>
-                    </div>" }}
-                 </code>
-             </pre>
-         </div>
+        <code-block 
+            code-content='<div class="select-filter-input">
+    <p>
+        <label for="search_by">Filter:</label>
+        <span>N/A</span>
+        <input type="hidden" name="search_by" id="sort_by" value="Date">
+        <button type="button">
+            <svg role="img"  viewBox="0 0 448 512">
+                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                </path>
+            </svg>
+        </button>
+    </p>
+    <ul>
+        <li>
+            <button>Active</button>
+        </li>
+        <li>
+            <button>Disabled</button>
+        </li>
+        <li>
+            <button>Draft</button>
+        </li>
+    </ul>
+</div>'></code-block>
     </div>
 @endsection

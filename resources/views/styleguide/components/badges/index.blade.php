@@ -37,13 +37,7 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-        <pre>
-            <code>
-                {{ "<div class=\"badge bg-primary\"></div>" }}
-            </code>
-        </pre>
-    </div>
+    <code-block code-content='<div class="badge bg-primary"></div>'></code-block> 
     <hr>
     <h3>Meta Badges</h3>
     <p>Meta badges are used to display single characters of information.</p>
@@ -75,13 +69,7 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-        <pre>
-            <code>
-                {{ "<div class=\"badge bg-primary meta\">1</div>" }}
-            </code>
-        </pre>
-    </div>
+    <code-block code-content='<div class="badge bg-primary meta">1</div>'></code-block> 
     <hr>
     <h3>Box Badges</h3>
     <p>Box badges are used to display single characters of information.</p>
@@ -113,16 +101,6 @@
     </div>
     <hr>
     <h3>Code Example</h3>
-    <div class="demo">
-        <pre>
-            <code>
-                {{ "<div class=\"badge bg-primary box\">A</div>" }}
-            </code>
-        </pre>
-    </div>
-    
-
-  
-  
+    <code-block code-content='<div class="badge bg-primary box">A</div>'></code-block>
 </div>
 @endsection

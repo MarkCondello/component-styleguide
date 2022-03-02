@@ -28,13 +28,7 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ "<v-select :multi=\"true\" inputName=\"products\" :options=\"{\{ \$data }\}\"></v-select>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block code-content='<v-select :multi="true" inputName="products" :options="\{\{ $data \}\}"></v-select>'></code-block>
     </div>
 @endsection
 

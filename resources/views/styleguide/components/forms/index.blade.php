@@ -39,33 +39,27 @@
         </div>
         <hr>
         <h3>Code Example</h3>
-        <div class="demo">
-            <pre>
-                <code>
-                    {{ " <form action=\"#\" method=\"post\">
-                        <div>
-                            <label for=\"name\">Enter your name: </label>
-                            <input type=\"text\" name=\"name\" id=\"name\" required placeholder=\"Add you name here.\">
-                            <small>The name field is required.</small>
-                        </div>
-                        <div>
-                            <label for=\"email\">Enter your email: </label>
-                            <input type=\"email\" name=\"email\" id=\"email\" required placeholder=\"Add you email here.\"
-                            >
-                            <small>The email field is required.</small>
-                        </div>
-                        <label for=\"mail-me\" class=\"checkbox\">
-                            <input type=\"checkbox\" id=\"mail-me\" />
-                            <span>Include marketing</span>
-                        </label>
-                        <footer>
-                            <input type=\"submit\" value=\"Sign up!\" class=\"button success\">
-                            <a href=\"#\" class=\"button\">Cancel</a>
-                        </footer>
-                    </form>" }}
-                </code>
-            </pre>
-        </div>
+        <code-block code-content='<form action="#" method="post">
+    <div>
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required placeholder="Add you name here.">
+        <small>The name field is required.</small>
+    </div>
+    <div>
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required placeholder="Add you email here."
+        >
+        <small>The email field is required.</small>
+    </div>
+    <label for="mail-me" class="checkbox">
+        <input type="checkbox" id="mail-me" />
+        <span>Include marketing</span>
+    </label>
+    <footer>
+        <input type="submit" value="Sign up!" class="button success">
+        <a href="#" class="button">Cancel</a>
+    </footer>
+</form>'></code-block>
         <hr>
         <h3>Error States</h3>
         <p>When form submissions does not pass validation, a generic error message should be presented to the user. In this example an alert component is added above the <code>form</code> element. Fields with an error should include the <code>.form-error</code> css class to the containing <code>div</code> tag.</p>

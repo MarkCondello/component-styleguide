@@ -11,36 +11,30 @@
     <p>A helper mixin for generating the flex columns is available called <code>flex-cols($breakpoint: xs);</code></p>
     <p>By defining the columns in a $columns map, we can create flex layouts with predefined columns.</p>
     <p>The map's key values, match up with the <a href="{{ route('styleguide.layouts.breakpoints') }}">breakpoints map</a> and define the number of columns for those breakpoints.</p>
-    <div class="demo">
-        <pre>
-            <code>
-{{ "
-\$columns: (
-  xs: (
-    columns: 2,
-    gutter: 16,
-  ),
-  sm: (
-    columns: 6,
-    gutter: 12,
-  ),
-  md: (
-    columns: 12,
-    gutter: 8,
-  ),
-  lg: (
-    columns: 12,
-    gutter: 8,
-  ),
-  xl: (
-    columns: 12,
-    gutter: 8,
-  )
-) !default;"
-            }}
-            </code>
-        </pre>
-    </div>
+    <code-block 
+        code-content='$columns: (
+    xs: (
+        columns: 2,
+        gutter: 16,
+    ),
+    sm: (
+        columns: 6,
+        gutter: 12,
+    ),
+    md: (
+        columns: 12,
+        gutter: 8,
+    ),
+    lg: (
+        columns: 12,
+        gutter: 8,
+    ),
+    xl: (
+        columns: 12,
+        gutter: 8,
+    )
+) !default;'></code-block>
+
     <hr>
     <h3>Demo</h3>
     <p>The below demo is a xl 12 column flex column layout with a <code>.justify-between</code> css class included.</p>
@@ -76,11 +70,8 @@
     <hr>
     <h3>Code Example</h3>
     <p>The breakpoint added to flex cols will set the min width value for the mixin. Below is the @flex-cols settings used for the demo:</p>
-    <div class="demo">
-        <pre>
-            <code>
-{{ "
-.flex-cols {
+    <code-block 
+        code-content=".flex-cols {
     @'include flex-cols(xl);
     > div {
         background-color: \$dcode-turquoise;
@@ -90,18 +81,15 @@
         // padding: 1rem;
         margin-bottom: 1rem;
     }
-}" }}
-            </code>
-        </pre>
-    </div>
-    <hr>
+}"></code-block> 
+       
+     <hr>
 
     <h3>Flex col alignment helpers</h3>
     <p>There is a list of flex css class helpers which can be added to the flex container. These are listed below:</p>
-    <div class="demo">
-        <pre>
-            <code>
-{{".justify-between {
+
+    <code-block 
+    code-content='.justify-between {
     justify-content: space-between;
 }
 .justify-start {
@@ -121,11 +109,9 @@
 }
 .no-wrap {
     flex-wrap: nowrap;
-}"}}
-   
-            </code>
-        </pre>
-    </div>
+}'></code-block>
+    
+ 
    
  </div>
 
