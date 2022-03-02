@@ -1,6 +1,7 @@
 @use '../../../preset/' as *;
 @use '../../../config/palette.scss' as *;
 @use '../branding/palette.scss' as *;
+@use '../../../config/fonts/menlo.scss' as *;
 
 .code-block {
     margin: 2rem 0;
@@ -23,25 +24,23 @@
             }
         }
     }
-
-    /* required class */
-    .code-editor {
+    .code-editor { /* required class */
         background: $dcode-d-blue;
         border-radius: 4px;
         color: $text-4;
+        font-family: "menlo";
         padding: 1.5rem 1rem;
         .prism-editor__line-numbers {
             line-height: 1.52!important;
             margin-right: 40px;
             .prism-editor__line-number {
                 color: $text-4;
+                font-family: "menlo";
                 font-size: 16px;
                 line-height: 1.5;
             }
         }
-
-        /* optional class for removing the outline */
-        .prism-editor__textarea:focus {
+        .prism-editor__textarea:focus { /* optional class for removing the outline */
             outline: none;
         }
     }
