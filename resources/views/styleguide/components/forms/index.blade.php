@@ -23,8 +23,7 @@
                 </div>
                 <div>
                     <label for="email">Enter your email: </label>
-                    <input type="email" name="email" id="email" required placeholder="Add you email here."
-                    >
+                    <input type="email" name="email" id="email" required placeholder="Add you email here.">
                     <small>The email field is required.</small>
                 </div>
                 <label for="mail-me" class="checkbox">
@@ -82,8 +81,7 @@
                 </div>
                 <div>
                     <label for="email">Enter your email: </label>
-                    <input type="email" name="email" id="email" required placeholder="Add you email here."
-                    >
+                    <input type="email" name="email" id="email" required placeholder="Add you email here.">
                     <small>The email field is required.</small>
                 </div>
                 <label for="mail-me" class="checkbox">
