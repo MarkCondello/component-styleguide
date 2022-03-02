@@ -12,6 +12,18 @@
         <p>Using the <code>.bg-COLOR </code> classes provides the background-colour and border-color to the container element and the button color as well.</p>
         <hr>
         <h3>HTML Demo</h3>
+        <code-block code-content='
+        <div class="demo">
+            <header class="alert primary">
+                <div>
+                    <span>&#8505;</span>
+                    <small>TEST FOOO Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptatum!</small>
+                </div>
+                <button>&#9747;</button>
+            </header>
+        </div>
+        '></code-block>
+
         <div class="demo">
             <header class="alert primary">
                 <div>

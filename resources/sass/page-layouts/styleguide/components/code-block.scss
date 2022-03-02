@@ -1,0 +1,47 @@
+@use '../../../preset/' as *;
+@use '../../../config/palette.scss' as *;
+@use '../branding/palette.scss' as *;
+
+.code-block {
+    margin-bottom: 2rem;
+    position: relative;
+    > header {
+        position: absolute;
+        right: 1.25rem;
+        top: 1rem;
+        z-index: 2;
+        span {
+            color: $text-4;
+            font-size: 12px;
+        }
+        button {
+            @include reset-btn;
+            &:hover {
+                svg {
+                    stroke: map-get($palette, 'primary');
+                }
+            }
+        }
+    }
+
+    /* required class */
+    .code-editor {
+        background: $dcode-d-blue;
+        border-radius: 4px;
+        color: $text-4;
+        padding: 1rem;
+
+        .prism-editor__line-numbers {
+            line-height: 1.52!important;
+            margin-right: 40px;
+            .prism-editor__line-number {
+                color: $text-4;
+            }
+        }
+
+        /* optional class for removing the outline */
+        .prism-editor__textarea:focus {
+            outline: none;
+        }
+    }
+}
