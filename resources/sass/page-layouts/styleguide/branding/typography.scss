@@ -14,8 +14,8 @@
     font-style: normal;
 }
 
-#styleguide-layout {
-    h1,h2,h3,h4,h5,h6 {
+#styleguide {
+    h2,h3,h4,h5,h6 {
         &:not(.demo h1, .demo h2, .demo h3, .demo h4, .demo h5, .demo h6) {
             color: $dcode-navy;            
             font-family: "Noe Display", Georgia, Cambria, "Times New Roman", Times, serif;

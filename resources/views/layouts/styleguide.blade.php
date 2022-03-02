@@ -1,13 +1,23 @@
-@extends('layouts.base')
+@extends('layouts.base', ['bodyId' => 'styleguide'])
 
 @section('body')
-<main id="styleguide-layout">
+<header>
     <aside>
-        <header>
-            <img src="{{ asset('/imgs/logos/dcode.svg') }}" alt="Dcode logo" width="50"/>
-            <h1>{{ config('app.name') }} Styleguide</h1>
-        </header>
-        <nav>
+        <img src="{{ asset('/imgs/logos/dcode.svg') }}" alt="Dcode logo" width="35"/>
+        <h1>Styleguide.<br>DcodeGroup</h1>
+    </aside>
+    <menu>
+        <ul>
+            <li><a href="#">Top Nav Item</a></li>
+            <li><a href="#">Top Nav Item</a></li>
+            <li><a href="#">Top Nav Item</a></li>
+            <li><a href="#">Top Nav Item</a></li>
+        </ul>
+    </menu>
+</header>
+<main>
+    <aside>
+        
             <ul class="vertical">
                 <li>
                     <button>Globals</button>
@@ -102,7 +112,7 @@
                 </li>  
                 {{-- <li><a href="">Accessibility</a></li> --}}
             </ul>
-        </nav>
+         
     </aside>
     <section>
         @yield('content')
