@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Tabs",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Tab Menus</h3>
         <p>All <code>ul</code> element contained by a <code>nav</code> element will have the generic menu styles applied to it.</p>
         <p>A <code>nav</code> element with a <code>.tabs</code> css class, will set up the tab navigation.</p>

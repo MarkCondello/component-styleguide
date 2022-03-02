@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Tables",
-'devReady' => false,
-])
-<div class="content">
+<div >
     <h3>Generic Tables</h3>
     <p>Generic tables should not need additional classes.</p>
     <p>To cater for responsive layouts, a data-header attribute is included to <code>&lt;td&gt;</code> elements with a reference to its assoicated header column name.</p>

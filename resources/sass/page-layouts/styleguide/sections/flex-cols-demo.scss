@@ -1,7 +1,7 @@
 @use '../../../preset/layouts.scss' as *;
 @use "../branding" as *;
 
-#styleguide-layout  {
+#styleguide  {
     .flex-cols {
         @include flex-cols(sm);
         @include flex-cols(md);

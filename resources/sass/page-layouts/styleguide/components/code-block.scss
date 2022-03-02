@@ -29,6 +29,7 @@
         border-radius: 4px;
         color: $text-4;
         font-family: "menlo";
+        font-size: 12px;
         padding: 1.5rem 1rem;
         .prism-editor__line-numbers {
             line-height: 1.52!important;
@@ -36,7 +37,7 @@
             .prism-editor__line-number {
                 color: $text-4;
                 font-family: "menlo";
-                font-size: 16px;
+                font-size: 12px;
                 line-height: 1.5;
             }
         }

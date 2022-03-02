@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-    'heading' => "Breakpoints",
-    'devReady' => true,
-])
-
-<div class="content">
+<div >
     <h3>About breakpoints</h3>
     <p>A breakpoints map is available for media queries to be included. See below:</p>
     <p>These breakpoint settings can be modified to suit the needs of a designed layout.</p>

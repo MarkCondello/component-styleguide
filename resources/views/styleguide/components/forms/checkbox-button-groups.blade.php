@@ -1,11 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-    @include('styleguide.partials.content-header', [
-        'heading' => "Checkbox Button Groups",
-        'devReady' => false,
-    ])
-    <div class="content">
+    <div >
         <h3>Checkbox Button Groups</h3>
         <p>A container div with the class of <code>btn-group</code> and a group of checkbox buttons will generate the button group styling.</p>
         <hr>

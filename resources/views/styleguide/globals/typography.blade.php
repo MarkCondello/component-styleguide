@@ -1,12 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-@include('styleguide.partials.content-header', [
-'heading' => "Typography",
-'devReady' => false,
-])
-
-<div class="content">
+<div >
     <h3>About Headings</h3>
     <p>The usage of header tags is similar to how a table of contents for a non-fiction book is written:</p>
     <ul>
