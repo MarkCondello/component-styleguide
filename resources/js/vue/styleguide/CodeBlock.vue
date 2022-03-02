@@ -1,5 +1,5 @@
 <template>
-    <article class="code-block">
+    <article class="code-block" v-if="code">
         <header>
             <span v-if="copyStatus">{{ copyStatus }}</span>
             <button @click="handleCopy">
@@ -14,9 +14,8 @@
 </template>
 
 <script>
-import { PrismEditor } from 'vue-prism-editor';
-import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles
-  // import highlighting library (you can use any library you want just return html string)
+  import { PrismEditor } from 'vue-prism-editor';
+  import 'vue-prism-editor/dist/prismeditor.min.css';
   import { highlight, languages } from 'prismjs/components/prism-core';
   import 'prismjs/components/prism-clike';
   import 'prismjs/components/prism-javascript';
@@ -34,9 +33,12 @@ import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles
     data() {
       return {
             copyStatus : null,
-            code: this.codeContent,
+            code: null,
       }  
-    }, 
+    },
+    created() {
+      this.code = this.codeContent.replace(/\\/g, '')
+    },
     methods: {
       highlighter(code) {
         return highlight(code, languages.js); // languages.<insert language> to return html with markup

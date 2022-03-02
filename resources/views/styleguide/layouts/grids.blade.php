@@ -38,9 +38,9 @@
     <p>Below is the @grids settings used for the demo:</p>
     <code-block 
         code-content=".six-by-three-grid {
-    @'include grids(6, 1rem, 1rem, 3);
+    @\include grids(6, 1rem, 1rem, 3);
     > div {
-        background-color: \$dcode-turquoise;
+        background-color: $dcode-turquoise;
         min-height: 100px;
         width: 100%;
     }
@@ -77,7 +77,7 @@
 
     <code-block 
         code-content=".cols-of-200 {
-    @'include cols-of(200px, 1rem, 1fr, 1000px);
+    @\include cols-of(200px, 1rem, 1fr, 1000px);
     > div {
         background-color: \$dcode-turquoise;
         min-height: 100px;
