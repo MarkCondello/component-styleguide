@@ -5,7 +5,9 @@
 
 #styleguide #app{
     @include bg-text-colors($palette);
-    
+    margin: auto;
+    max-width: 1440px;
+
     > header,
     > main {
         display: grid;
@@ -29,7 +31,7 @@
             }
         }
         > div {
-            padding-right: 25px;
+            // padding-right: 25px;
             display: grid;
             grid-template-columns: 1fr 230px;
             grid-template-rows: auto;
@@ -64,6 +66,7 @@
                     @include reset-btn;
                     display: block;
                     font-weight: 600;
+                    font-size: 14px;
                     padding: 0.5rem 0.75rem;
                     text-align: left;
                     text-transform: uppercase;
@@ -83,6 +86,7 @@
                     a {
                         border: 1px solid transparent;
                         display: block;
+                        font-size: 14px;
                         padding: .7rem .75rem;
                         text-decoration: none;
                         width: 100%;
@@ -114,7 +118,7 @@
             grid-template-columns: 1fr 230px;
             grid-template-rows: auto;
             grid-template-areas: "article aside";
-            padding-right: 25px;
+            // padding-right: 25px;
             > article {
                 padding: 3rem 2rem;
                 hr:not(.actions hr) {

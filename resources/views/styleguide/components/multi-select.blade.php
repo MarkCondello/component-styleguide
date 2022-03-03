@@ -2,7 +2,7 @@
 
 @section('content')
     <div >
-        <h3>Search Multi Selects</h3>
+        <h3>Multiselects Wrapper</h3>
         <p>We have created a wrapper for the VueMultiselect. More details about the vue-multselect package can be found <a href="https://vue-multiselect.js.org/" target="blank">here</a>.</p>
         <p>The wrapper package github repo which Dcode maintains can be found <a href="https://github.com/DCODE-GROUP/vue-multiselect" target="_blank">here</a>.</p>
         <br>

@@ -55,7 +55,7 @@ $font-family: 'inter', sans-serif;
     @include heading-font-regular;
     @include font-color;
     @include clamp(28, 33);
-    letter-spacing: 0.2em;
+    // letter-spacing: 0.2em;
     line-height: 1.3;
     @if ($with-margins) {
         margin: -3px 0 8px;
