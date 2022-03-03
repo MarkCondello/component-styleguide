@@ -1,7 +1,7 @@
 @extends('layouts.styleguide')
 
 @section('content')
-<div >
+<div>
     <h3>Search Inputs</h3>
     <p>Adding the class <code>.search-input</code> to a container <code>p</code> tag will position the child
         <code>submit button</code> to the right of this container.</p>
