@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@dcodegroup-au/vue-multiselect": "0.0.3",
+        "@dcodegroup-au/vue-multiselect": "0.0.4",
         "@dcodegroup-au/vuetable-3": "^4.0.2",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",

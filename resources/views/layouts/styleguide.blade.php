@@ -7,7 +7,7 @@
         <h1>Styleguide.<br>DcodeGroup</h1>
     </aside>
     <div>
-        {{-- ToDo: Add top menu and global serach --}}
+        {{-- ToDo: Add top menu and global search --}}
         <menu>
             {{-- <ul>
                 <li><a href="#">Top Nav Item</a></li>
