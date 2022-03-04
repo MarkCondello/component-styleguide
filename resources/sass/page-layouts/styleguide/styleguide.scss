@@ -1,11 +1,14 @@
 @use "./branding/"as *;
 @use "../../preset/"as *;
 @use "../../config/palette.scss"as *;
-@use "../../config/variables.scss"as *;
+@use "~/sass/config/variables.scss"as *;
 
 #styleguide #app{
     @include bg-text-colors($palette);
     
+    margin: auto;
+    max-width: 1440px;
+
     > header,
     > main {
         display: grid;
@@ -30,6 +33,7 @@
         }
         > div {
             padding-right: 25px;
+            // padding-right: 25px;
             display: grid;
             grid-template-columns: 1fr 230px;
             grid-template-rows: auto;
