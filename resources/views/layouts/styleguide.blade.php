@@ -23,6 +23,10 @@
     <aside>
         <ul>
             <li>
+                <button>Dcode Preset</button>
+                {{-- ToDo: Add details about the Dcode Preset ron. --}}
+            </li>
+            <li>
                 <button>Globals</button>
                 <ul>
                     <li>
@@ -30,6 +34,15 @@
                     </li>
                     <li>
                         <a href="{{ route('styleguide.globals.typo') }}" @if(request()->is('globals/typography')) class="active" @endif>Typography</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('styleguide.globals.breakpoints') }}" @if(request()->is('globals/breakpoints')) class="active" @endif>Breakpoints</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('styleguide.globals.flex') }}" @if(request()->is('globals/flex')) class="active" @endif>Flex Columns</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('styleguide.globals.grids') }}" @if(request()->is('globals/grids')) class="active" @endif>CSS Grids</a>
                     </li>
                 </ul>
             </li>
@@ -43,7 +56,7 @@
                         <a href="{{ route('styleguide.components.modals') }}" @if(request()->is('components/modals')) class="active" @endif>Modals</a>
                     </li>
                     <li>
-                        <a href="{{ route('styleguide.components.multi-select') }}" @if(request()->is('components/multi-selects')) class="active" @endif>Multi Selects</a>
+                        <a href="{{ route('styleguide.components.multi-select') }}" @if(request()->is('components/multi-selects')) class="active" @endif>Vue Multiselects</a>
                     </li>
                     <li>
                         <a href="{{ route('styleguide.components.side-panels') }}" @if(request()->is('components/side-panels')) class="active" @endif>Side Panels</a>
@@ -111,16 +124,9 @@
             <li>
                 <button>Layouts</button>
                 <ul>
-                    <li>
-                        <a href="{{ route('styleguide.layouts.breakpoints') }}" @if(request()->is('layouts/breakpoints')) class="active" @endif>Breakpoints</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('styleguide.layouts.flex') }}" @if(request()->is('layouts/flex')) class="active" @endif>Flex Columns</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('styleguide.layouts.grids') }}" @if(request()->is('layouts/grids')) class="active" @endif>CSS Grids</a>
-                    </li>
-                
+                    <li><a href="#">List</a></li>
+                    <li><a href="#">Show</a></li>
+                    <li><a href="#">Edit</a></li>
                 </ul>
             </li>  
             {{-- <li><a href="">Accessibility</a></li> --}}

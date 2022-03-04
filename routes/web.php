@@ -27,6 +27,7 @@ Route::group([
     'as' => 'styleguide.'
 ], 
 function(){
+    // Route::view('/dcode-preset', '')->name('preset');
     Route::group([
         'prefix' => 'globals',
         'as' => 'globals.'
@@ -35,6 +36,9 @@ function(){
         Route::view('/', 'styleguide/globals/index')->name('index');
         Route::view('/colours', 'styleguide/globals/colours')->name('colours');
         Route::view('/typography', 'styleguide/globals/typography')->name('typo');
+        Route::view('/grids', 'styleguide/globals/grids')->name('grids');
+        Route::view('/flex', 'styleguide/globals/flex')->name('flex');
+        Route::view('/breakpoints', 'styleguide/globals/breakpoints')->name('breakpoints');
     });
     Route::group([
         'prefix' => 'components',
@@ -74,9 +78,7 @@ function(){
         'prefix' => 'layouts',
         'as' => 'layouts.'
         ], function(){
-            Route::view('/grids', 'styleguide/layouts/grids')->name('grids');
-            Route::view('/flex', 'styleguide/layouts/flex')->name('flex');
-            Route::view('/breakpoints', 'styleguide/layouts/breakpoints')->name('breakpoints');
+            //ToDo : list, show, edit etc
     });
     Route::get('api/table-demo', function(){
         return (object) [

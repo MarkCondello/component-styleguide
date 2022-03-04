@@ -150,6 +150,11 @@ h6 {
         @include p-sml(true);
     }
 }
+small {
+    @include p-sml(true);
+    color: map-get($palette, 'dark-gray');
+}
+
 #{$text-els} {
     @include text-alignments;
     em {

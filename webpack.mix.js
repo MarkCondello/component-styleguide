@@ -1,5 +1,5 @@
 const mix = require("laravel-mix");
-
+const path = require("path")
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -17,7 +17,17 @@ mix.js("resources/js/app.js", "public/js/app.js")
         "resources/sass/config/fonts/menlo",
     ], "public/fonts/")
     .sass("resources/sass/app.scss", "public/css/app.css")
-    .vue();
+    .vue()
+    .webpackConfig({
+        devtool: "inline-source-map",
+        resolve: {
+          extensions: [".js", ".vue", ".json"],
+          alias: {
+            '~': path.join(__dirname, './resources/'),
+            'dcode': path.join(__dirname, './node_modules/@dcodegroup-au/')
+          },
+        },
+      });
     
 if (mix.inProduction()) {
     mix.version();
