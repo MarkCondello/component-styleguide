@@ -5,7 +5,7 @@
     <h3>About flex cols</h3>
     <p>A helper mixin for generating the flex columns is available called <code>flex-cols($breakpoint: xs);</code></p>
     <p>By defining the columns in a $columns map, we can create flex layouts with predefined columns.</p>
-    <p>The map's key values, match up with the <a href="{{ route('styleguide.layouts.breakpoints') }}">breakpoints map</a> and define the number of columns for those breakpoints.</p>
+    <p>The map's key values, match up with the <a href="{{ route('styleguide.globals.breakpoints') }}">breakpoints map</a> and define the number of columns for those breakpoints.</p>
     <code-block 
         code-content='$columns: (
     xs: (

@@ -30,7 +30,6 @@ Vue.component("Modal", Modal);
 Vue.component("DeleteModal", DeleteModal);
 Vue.component("DeleteModalTrigger", DeleteModalTrigger);
 Vue.component("VDatePicker", VDatePicker);
-Vue.component("VSelect", VSelect);
 Vue.component("VTable", VTable);
 Vue.component("BaseTable", BaseTable);
 Vue.component("SidePanel", SidePanel);
