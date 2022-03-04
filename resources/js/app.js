@@ -15,7 +15,6 @@ import SidePanelJobCreate from "./vue/styleguide/SidePanelJobCreate.vue";
 import VTable from "./vue/components/UI/VTable.vue";
 import VDatePicker from "./vue/components/UI/VDatePicker.vue";
 import MultiselectWrapper from '@dcodegroup-au/vue-multiselect/MultiselectWrapper.vue';
-
 import DatepickerWrapper from '@dcodegroup-au/vue-datepicker/DatepickerWrapper.vue';
 
 import DeleteModal from './vue/components/modals/DeleteModal.vue';
