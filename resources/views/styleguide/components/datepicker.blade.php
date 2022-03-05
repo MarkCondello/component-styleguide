@@ -100,3 +100,13 @@ $primary-color: $primary;
     </div>
 @endsection
 
+@section('contentLinks')
+    <ul>
+      <li><button>Datepicker</button>
+        <ul>
+          <li><a href="#">--</a></li>
+        </ul>
+      </li>
+    </ul>
+@endsection
+
