@@ -45,7 +45,7 @@ function(){
         'as' => 'components.'
     ],
     function(){
-        Route::view('/date-pickers', 'styleguide/components/date-pickers')->name('date-pickers'); // need to create npm package for this one
+        Route::view('/datepicker', 'styleguide/components/datepicker')->name('datepicker');
         Route::view('/modals', 'styleguide/components/modals')->name('modals');
         Route::view('/multi-selects', 'styleguide/components/multi-select')->name('multi-select');
         Route::view('/side-panels', 'styleguide/components/side-panels')->name('side-panels');
