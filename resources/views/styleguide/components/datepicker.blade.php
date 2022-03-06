@@ -41,11 +41,11 @@
         <code-block code-content='2022-03-05'></code-block>
         <small>date ranges</small>
         <code-block code-content='2022-03-05,2022-03-12'></code-block>
-        <p>With Vue implemenatations the date data format is set to d/m/Y</p>
+        <p>With Vue implemenatations the emitted input event will return a formatted date payload.</p>
         <small>single date items</small>
-        <code-block code-content='"07/03/2022"'></code-block>
+        <code-block code-content='["2022-03-22"]'></code-block>
         <small>date ranges</small>
-        <code-block code-content='["07/03/2022","12/03/2022"]'></code-block>
+        <code-block code-content='["2022-03-22","2022-03-26"]'></code-block>
         <hr>
         <h3>Configuration options</h3>
         <table>
