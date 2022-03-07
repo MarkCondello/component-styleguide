@@ -15,6 +15,8 @@ import SidePanelJobCreate from "./vue/styleguide/SidePanelJobCreate.vue";
 import VTable from "./vue/components/UI/VTable.vue";
 import VDatePicker from "./vue/components/UI/VDatePicker.vue";
 import MultiselectWrapper from '@dcodegroup-au/vue-multiselect/MultiselectWrapper.vue';
+import DatepickerWrapper from '@dcodegroup-au/vue-datepicker/DatepickerWrapper.vue';
+
 import DeleteModal from './vue/components/modals/DeleteModal.vue';
 import DeleteModalTrigger from './vue/styleguide/DeleteModalTrigger.vue';
 import JobPanelTrigger from './vue/styleguide/JobPanelTrigger.vue';
@@ -23,6 +25,7 @@ import CodeBlock from './vue/styleguide/CodeBlock.vue';
 // Vue.component("Icon", Icon);
 // Vue.component("InputWrapper", InputWrapper);
 Vue.component("MultiselectWrapper", MultiselectWrapper);
+Vue.component("DatepickerWrapper", DatepickerWrapper);
 Vue.component("Modal", Modal);
 Vue.component("DeleteModal", DeleteModal);
 Vue.component("DeleteModalTrigger", DeleteModalTrigger);
