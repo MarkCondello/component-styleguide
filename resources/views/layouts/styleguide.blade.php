@@ -50,7 +50,7 @@
                 <button>Components</button>
                 <ul>
                     <li>
-                        <a href="{{ route('styleguide.components.date-pickers') }}" @if(request()->is('components/datepickers')) class="active" @endif>Date Pickers</a>
+                        <a href="{{ route('styleguide.components.datepicker') }}" @if(request()->is('components/datepicker')) class="active" @endif>Datepicker</a>
                     </li>
                     <li>
                         <a href="{{ route('styleguide.components.modals') }}" @if(request()->is('components/modals')) class="active" @endif>Modals</a>
