@@ -1,6 +1,5 @@
-@use '../' as *;
-@use '../mixins/forms.scss' as *;
-
+// @use '../' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/forms.scss' as *;
 @use '../../config/variables.scss' as *;
 
 #{$inputs}{

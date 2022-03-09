@@ -1,4 +1,4 @@
-@use '../mixins/buttons.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/buttons.scss' as *;
 @use '../../config/variables.scss' as *;
 
 @function varients($map, $varient, $attribute) {

@@ -1,4 +1,8 @@
-@use '../../../preset/' as *;
+// @use '../../../preset/' as *;
+
+@use 'dcode/sass-lib/sass/base.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/helpers.scss' as *;
+
 @use '../../../config/palette.scss' as *;
 @use '../branding/palette.scss' as *;
 @use '../../../config/fonts/menlo.scss' as *;

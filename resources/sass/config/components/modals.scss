@@ -1,5 +1,5 @@
-@use '../../preset/mixins/modals.scss' as *;
-@use '../../config/variables.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/modals.scss' as *;
+ @use '../../config/variables.scss' as *;
 
 .modal-wrapper {
     @include modal($window-bg, $modal-width, $modal-radius);

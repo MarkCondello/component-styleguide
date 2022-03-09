@@ -1,10 +1,9 @@
-@use '../mixins/check-radio-btns.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/check-radio-btns.scss' as *;
 @use '../../config/palette.scss' as *;
 @use '../../config/variables.scss' as *;
 
 label.checkbox-btn,
 label.radio-btn {
-    //needs an if else
     @include check-radio-btns(
         $button-border-radius, 
         $palette, 

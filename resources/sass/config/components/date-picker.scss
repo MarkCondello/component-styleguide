@@ -1,6 +1,6 @@
-@use '../../../config/palette.scss' as *;
-@use '../../../config/variables.scss' as *;
-@use '../../../preset/mixins/forms.scss' as *;
+@use '../../config/palette.scss' as *;
+@use '../../config/variables.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/forms.scss'as *;
 
 $default-color: map-get($palette, "blackest");
 $primary-color: map-get($palette, "primary");

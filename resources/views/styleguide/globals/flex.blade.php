@@ -3,8 +3,8 @@
 @section('content')
 <div >
     <h3>About flex cols</h3>
-    <p>A helper mixin for generating the flex columns is available called <code>flex-cols($breakpoint: xs);</code></p>
-    <p>By defining the columns in a $columns map, we can create flex layouts with predefined columns.</p>
+    <p>A helper mixin for generating the flex columns is available called <code>flex-cols($columns, $breakpoints);</code></p>
+    <p>By defining the columns and breakpoints in a $columns and $breakpoints map respectively, we can create flex layouts with predefined column amounts.</p>
     <p>The map's key values, match up with the <a href="{{ route('styleguide.globals.breakpoints') }}">breakpoints map</a> and define the number of columns for those breakpoints.</p>
     <code-block 
         code-content='$columns: (
@@ -29,6 +29,14 @@
         gutter: 8,
     )
 ) !default;'></code-block>
+<code-block 
+code-content='$breakpoints: (
+    xs: 350px,
+    sm: 480px,
+    md: 764px,
+    lg: 1024px,
+    xl: 1400px,
+  ) !default;'></code-block>
 
     <hr>
     <h3>Demo</h3>
@@ -37,9 +45,8 @@
         <div class="flex-cols justify-between">
             <div class="xl-4 lg-4">XLarge 4</div>
             <div class="xl-2">XLarge 2</div>
-             <div class="xl-3">XLarge 3</div>
+            <div class="xl-3">XLarge 3</div>
             <div class="xl-1">XLarge 1</div>
-
             <div class="xl-5 ">XLarge 5</div>
             <div class="xl-6 ">XLarge 6</div>
          </div>
@@ -66,16 +73,14 @@
     <h3>Code Example</h3>
     <p>The breakpoint added to flex cols will set the min width value for the mixin. Below is the @flex-cols settings used for the demo:</p>
     <code-block 
-        code-content=".flex-cols {
-    @\include flex-cols(xl);
-    > div {
-        background-color: \$dcode-turquoise;
-        border: 1px solid #fff;
-        color: #fff;
-        min-height: 100px;
-        // padding: 1rem;
-        margin-bottom: 1rem;
-    }
+        code-content="@\include flex-cols($columns, $breakpoints);
+.flex-cols > div {
+    background-color: $dcode-turquoise;
+    border: 1px solid #fff;
+    color: #fff;
+    min-height: 100px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }"></code-block> 
        
      <hr>

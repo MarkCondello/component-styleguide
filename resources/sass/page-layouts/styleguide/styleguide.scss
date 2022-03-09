@@ -1,9 +1,17 @@
 @use "./branding/"as *;
-@use "../../preset/"as *;
-@use "../../config/palette.scss"as *;
+@use "~/sass/config/palette.scss"as *;
 @use "~/sass/config/variables.scss"as *;
 
-@use 'dcode/sass-lib/sass/base.scss' as lib;
+@use 'dcode/sass-lib/sass/base.scss' as *;
+@use 'dcode/sass-lib/sass/breakpoints.scss' as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/helpers' as *;
+
+#styleguide {
+    // @include media-breakpoint-up('md', $breakpoints) {
+    //     border: 2px solid grey;
+    // }
+}
 
 #styleguide #app{
     @include bg-text-colors($palette);

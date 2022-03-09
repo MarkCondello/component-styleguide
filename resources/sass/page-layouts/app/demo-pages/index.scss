@@ -1,4 +1,6 @@
-@use '../../../preset/' as *;
+// @use 'dcode/sass-lib/sass/base.scss' as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
+
 @use '../../../config/variables.scss' as *;
 @use '../../../config/palette.scss' as *;
 @use '../../../config/typography.scss' as *;
@@ -15,9 +17,9 @@ html {
             margin: auto;
             max-width: $body-max-width;
             @include space-between-center;
-            @include media-breakpoint-down('xl') {
-                padding: 0 1rem;
-            }
+            // @include media-breakpoint-down('xl') {
+            //     padding: 0 1rem;
+            // }
             h1 {
                 margin:0;
                 span {
@@ -33,9 +35,9 @@ html {
         > div {
             margin: auto;
             max-width: $body-max-width;
-            @include media-breakpoint-down('xl') {
-                padding: 0 1rem;
-            }
+            // @include media-breakpoint-down('xl') {
+            //     padding: 0 1rem;
+            // }
             header.refine {
                 @include space-between-center;
                 margin-bottom: 2rem;

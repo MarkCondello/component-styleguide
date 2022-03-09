@@ -7,7 +7,7 @@
     <p>Tags are created with the <code>.tag</code> class. Using the <code>.bg-COLOR </code> and or <code>.text-COLOR</code> classes provides the background colour to these badges.</p>
      <div class="demo">
         <p aria-describedby="genericTag"><b>Note:</b> This task needs to be actioned</p>
-        <div class="cols-of-50">
+        <div class="cols-of-150">
             <div>
                 <div class="tag" id="genericTag">Generic tag</div>
             </div>
@@ -38,7 +38,7 @@
     <p>Using the <code>.hollow-COLOR </code>classes provides the background colour to these badges.</p>
     <div class="demo">
         <p aria-describedby="primaryTag"><b>Note:</b> This task needs to be actioned</p>
-        <div class="cols-of-50">
+        <div class="cols-of-150">
             <div>
                 <div class="tag hollow-light-gray" >tag hollow-light-gray</div>
              </div>

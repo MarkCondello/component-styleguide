@@ -1,12 +1,11 @@
-@use '../mixins/tags.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/tags.scss' as *;
 @use '../../config/variables.scss' as *;
 @use '../../config/palette.scss' as *;
 
-.tag  {
-    //needs if else check
+.tag {
     @include tags(
-        $tag-bg, 
-        $tag-color, 
+        $tag-bg,
+        $tag-color,
         $tag-radius,
         $palette: $palette,
     );

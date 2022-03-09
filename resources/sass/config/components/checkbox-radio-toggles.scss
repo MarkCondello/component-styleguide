@@ -1,9 +1,8 @@
-@use '../mixins/check-radio-toggles.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/check-radio-toggles.scss' as *;
 @use '../../config/variables.scss' as *;
 
 label.checkbox-toggle,
 label.radio-toggle {
-    //needs if else
     @include check-radio-toggles(
         $toggles-label-color, 
         $toggles-unchecked-color, 

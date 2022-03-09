@@ -1,6 +1,10 @@
 
-@use '../preset/' as *;
+// @use '../preset/' as *;
 
+// @use 'dcode/sass-lib/sass/base.scss' as *;
+// @use 'dcode/sass-lib/sass/layouts.scss' as *;
+
+@use 'dcode/sass-lib/sass/base.scss' as *;
 @use './palette.scss' as *;
 @use './fonts/inter.scss' as *;
 
@@ -156,7 +160,7 @@ small {
 }
 
 #{$text-els} {
-    @include text-alignments;
+    // @include text-alignments;
     em {
         font-style: normal;
         color: $text-2;
@@ -164,7 +168,7 @@ small {
 }
 a,
 button {
-    @include states($text-2, darken($text-2, 15%));
+    // @include states($text-2, darken($text-2, 15%));
 }
 
 dl {

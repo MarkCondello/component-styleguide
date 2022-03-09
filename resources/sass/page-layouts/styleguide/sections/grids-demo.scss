@@ -1,5 +1,5 @@
 @use "../branding" as *;
-@use '../../../preset/layouts.scss' as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
 
 #styleguide  {
     .six-by-three-grid {
