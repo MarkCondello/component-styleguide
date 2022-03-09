@@ -56,9 +56,8 @@ window.onload = (event) => {
         el.classList.toggle('active');
     }
 
-    let menus = Array.from(document.querySelectorAll('.demo ul a, .demo ul button'));
+    let menus = Array.from(document.querySelectorAll('.demo ul a, .demo ul button, nav ul li button'));
     if(menus.length) {
-        
         menus.forEach(menu => {
             menu.addEventListener('click', function(ev){
                 ev.preventDefault()

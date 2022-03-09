@@ -1,6 +1,6 @@
 @use 'dcode/sass-lib/sass/layouts.scss' as *;
 @use "~/sass/config/variables.scss"as *;
-@use "../branding" as *;
+@use "~/sass/config/palette.scss"as *;
 
 #styleguide {
   @include flex-cols($columns, $breakpoints);

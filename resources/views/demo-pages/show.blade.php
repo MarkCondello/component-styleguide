@@ -1,7 +1,5 @@
 @extends('layouts.app', [
-    'bodyId' => 'demo-pages',
-    'bgClass' => 'bg-off-white'
-])
+    'bodyId' => 'demo-pages'])
 
 @section('header')
     @include('sections.logo-menu')
@@ -13,7 +11,7 @@
             <h2>Job List</h2>
             <hr>
             <div class="form">
-                <p class="search-input">
+                <p class="search-filter-input">
                     <label for="search">Search for jobs</label>
                     <input type="text" name="search" id="search" placeholder="Search Jobs">
                     <button type="submit">

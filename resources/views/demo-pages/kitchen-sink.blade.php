@@ -1,67 +1,60 @@
-@extends('layouts.app', [
-'bodyId' => "demo-pages",
-])
-
+@extends('layouts.styleguide')
+@section('contentLinks')
+<ul class="fixed">
+    <li><button>Kitchen sink items</button>
+        <ul>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#badges">Badges</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#checkbox-buttons">Checkbox Buttons</a></li>
+            <li><a href="#checkbox-groups">Checkbox Groups</a></li>
+            <li><a href="#checkbox-toggles">Checkbox Toggles</a></li>
+            <!-- <li><a href="#select-filters">Select Filters</a></li> -->
+            <li><a href="#menus">Menus</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#tags">Tags</a></li>
+            <li><a href="#tiles">Tiles</a></li>
+            <li><a href="#modals">Modals</a></li>
+            <li><a href="#side-panels">Side Panels</a></li>
+            <li><a href="#date-pickers">Date Pickers</a></li>
+        </ul>
+    </li>
+</ul>
+@endsection
 @section('content')
-<div class="styleguide-reference">
-    <aside>
-        <menu>
-            <ul class="vertical">
-                <li><a href="#buttons">Buttons</a></li>
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#typography">Typography</a></li>
-                <li><a href="#badges">Badges</a></li>
-                <li><a href="#cards">Cards</a></li>
-                <li><a href="#checkbox-buttons">Checkbox Buttons</a></li>
-                <li><a href="#checkbox-groups">Checkbox Groups</a></li>
-                <li><a href="#checkbox-toggles">Checkbox Toggles</a></li>
-                <!-- <li><a href="#select-filters">Select Filters</a></li> -->
-                <li><a href="#menus">Menus</a></li>
-                <li><a href="#tables">Tables</a></li>
-                <li><a href="#tabs">Tabs</a></li>
-                <li><a href="#tags">Tags</a></li>
-                <li><a href="#tiles">Tiles</a></li>
-                <li><a href="#modals">Modals</a></li>
-                <li><a href="#side-panels">Side Panels</a></li>
-                <li><a href="#date-pickers">Date Pickers</a></li>
-            </ul>
-        </menu>
-    </aside>
     <section>
-        <h2>Kitchen Sink</h2>
+        <h3>Kitchen Sink</h3>
         <hr>
         <h3><a name="buttons">Buttons</a></h3>
-        <div class="bg-whitest" style="padding: 1rem;">
-            <p>Generic Buttons</p>
-            <a href="#" class="button">Generic button</a>
-            <a href="#" class="button primary">Button Primary</a>
-            <a href="#" class="button secondary">Button Secondary</a>
-            <a href="#" class="button success">Button Success</a>
-        </div>
-        <div>
-            <p>Hollow Buttons</p>
-            <a href="#" class="button -hollow">Button Hollow</a>
-            <a href="#" class="button -hollow -success">Button Hollow Success</a>
-        </div>
-        <div class="bg-whitest" style="padding: 1rem;">
-            <p>Small Buttons</p>
-            <a href="#" class="button sml">Small Button </a>
-        </div>
-        <div class="bg-whitest" style="padding: 1rem;">
-            <p>Buttons with Icons</p>
-            <a href="#" class="button icon-left">Add List
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path
-                        d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" />
-                </svg>
-            </a>
-            <a href="#" class="button -hollow -success icon-right">View Tasks
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path
-                        d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" />
-                </svg>
-            </a>
-        </div>
+        <p>Generic Buttons</p>
+        <a href="#" class="button">Generic button</a>
+        <a href="#" class="button primary">Button Primary</a>
+        <a href="#" class="button secondary">Button Secondary</a>
+        <a href="#" class="button success">Button Success</a>
+        <p><br></p>
+        <p>Hollow Buttons</p>
+        <a href="#" class="button -hollow">Button Hollow</a>
+        <a href="#" class="button -hollow -success">Button Hollow Success</a>
+        <p><br></p>
+        <p>Small Buttons</p>
+        <a href="#" class="button sml">Small Button </a>
+        <p><br></p>
+        <p>Buttons with Icons</p>
+        <a href="#" class="button icon-left">Add List
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                    d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" />
+            </svg>
+        </a>
+        <a href="#" class="button -hollow -success icon-right">View Tasks
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                    d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" />
+            </svg>
+        </a>
         <hr>
         <h3><a name="colors">Colors</a></h3>
         <div class="cols-of-150">
@@ -86,6 +79,7 @@
                 <p class="text-danger">Danger</p>
             </div>
         </div>
+        <p><br></p>
         <div class="cols-of-150">
             <div class="colour-block">
                 <div class="bg-medium-gray"></div>
@@ -593,5 +587,4 @@
             <v-date-picker name="due_date" value="{{ Carbon\Carbon::now() }}"></v-date-picker>
         </div>
     </section>
-</div>
  @endsection

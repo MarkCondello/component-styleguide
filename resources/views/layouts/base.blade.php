@@ -23,7 +23,7 @@
         <!-- /LARAVEL Kanopi Sidebar Tag laravel -->
     </head>
     <body {{isset($bodyId) ? "id=$bodyId" : null }}>
-        <div id="app" {{isset($bgClass) ? "class=$bgClass" : null }}>
+        <div id="app">
             @yield('body')
         </div>
         <!-- Scripts -->
