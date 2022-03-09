@@ -51,7 +51,32 @@ window.onload = (event) => {
             new SelectFilter(selectFilter);
         });
     }
-};
+
+    window.toggleActive = function(el) {
+        el.classList.toggle('active');
+    }
+
+    let menus = Array.from(document.querySelectorAll('.demo ul a, .demo ul button'));
+    if(menus.length) {
+        
+        menus.forEach(menu => {
+            menu.addEventListener('click', function(ev){
+                ev.preventDefault()
+                if(menu.classList.contains('active')) {
+                    window.pal.$clickoffElements = menus;
+                    window.pal.clickoffCallback = (
+                        function(){
+                            menus.forEach(item => {
+                                item.classList.remove('active'); 
+                            })
+                            this.resetClickoff();}
+                    );
+                }
+            });
+        });
+    }
+    
+ };
 
 Vue.use(vClickOutside);
 new Vue({

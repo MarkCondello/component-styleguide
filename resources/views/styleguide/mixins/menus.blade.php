@@ -14,7 +14,7 @@
                     <li><a href="">menu 1</a></li>  
                     <li><a href="">menu 2</a></li>
                     <li>
-                        <button>menu 3</button>
+                        <button onclick="toggleActive(this)">menu 3</button>
                         <ul>
                             <li>
                                 <a href="#">menu 3a</a>
@@ -27,9 +27,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">menu 4</a></li>
+                    <li><a href="#">menu 4</a></li>
                     <li>
-                        <a href="#">menu 5</a>
+                        <a href="#" onclick="toggleActive(this)">menu 5</a>
                         <ul class="right">
                             <li>
                                 <a href="#">menu 5a</a>
@@ -99,7 +99,7 @@
                     <li><a href="">menu 1</a></li>  
                     <li><a href="">menu 2</a></li>
                     <li>
-                        <button>menu 3</button>
+                        <button onclick="toggleActive(this)">menu 3</button>
                         <ul>
                             <li>
                                 <a href="#">menu 3a</a>
@@ -114,7 +114,7 @@
                     </li>
                     <li><a href="">menu 4</a></li>
                     <li>
-                        <a href="#">menu 5</a>
+                        <a href="#" onclick="toggleActive(this)">menu 5</a>
                         <ul>
                             <li>
                                 <a href="#">menu 5a</a>
@@ -169,4 +169,5 @@
     </ul>
 </nav>'></code-block>
     </div>
+
 @endsection

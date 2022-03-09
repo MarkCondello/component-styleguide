@@ -83,9 +83,6 @@
                         <a href="{{ route('styleguide.mixins.cards') }}" @if(request()->is('mixins/cards')) class="active" @endif>Cards</a>
                     </li>
                     <li>
-                        <a href="{{ route('styleguide.mixins.forms') }}" @if(request()->is('mixins/forms')) class="active" @endif>Forms</a> 
-                    </li>
-                    <li>
                         <a href="{{ route('styleguide.mixins.checkboxes') }}" @if(request()->is('mixins/checkboxes')) class="active" @endif>Checkboxes</a>
                     </li>
                     <li>
@@ -98,17 +95,17 @@
                         <a href="{{ route('styleguide.mixins.checkbox-btn-groups') }}" @if(request()->is('mixins/checkbox-button-groups')) class="active" @endif>Checkbox Button Groups</a>
                     </li>
                     <li>
+                        <a href="{{ route('styleguide.mixins.forms') }}" @if(request()->is('mixins/forms')) class="active" @endif>Forms</a> 
+                    </li>
+                    <li>
+                        <a href="{{ route('styleguide.mixins.menus') }}" @if(request()->is('mixins/menus')) class="active" @endif>Menus</a>
+                    </li>
+                    <li>
                         <a href="{{ route('styleguide.mixins.search-inputs') }}" @if(request()->is('mixins/search-inputs')) class="active" @endif>Search Inputs</a>
                     </li>
                     <li>
                         <a href="{{ route('styleguide.mixins.select-filters') }}" @if(request()->is('mixins/select-filters')) class="active" @endif>Select Filters</a>
                     </li>
-           
-            
-                    <li>
-                        <a href="{{ route('styleguide.mixins.navs') }}" @if(request()->is('mixins/navigation')) class="active" @endif>Navigation</a>
-                    </li>
-       
                     <li>
                         <a href="{{ route('styleguide.mixins.tabs') }}" @if(request()->is('mixins/tabs')) class="active" @endif>Tabs</a>
                     </li>
@@ -124,12 +121,14 @@
             <li>
                 <button>Layouts</button>
                 <ul>
-                    <li><a href="#">List</a></li>
+                    <li><a href="{{ route('layouts.list') }}">List</a></li>
                     <li><a href="#">Show</a></li>
+                    {{-- <li><a href="{{ route('layouts.list') }}">Show</a></li> --}}
+                    {{-- ToDo --}}
                     <li><a href="#">Edit</a></li>
                 </ul>
             </li>  
-            {{-- <li><a href="">Accessibility</a></li> --}}
+            <li><a href="{{ route('kitchen-sink') }}">Kitchen Sink</a></li>
         </ul>
     </aside>
     <section>

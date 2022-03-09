@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')->name('home');
-Route::view('reference', 'demo-pages/styleguide-reference')->name('reference');
-
+Route::view('kitchen-sink', 'demo-pages/kitchen-sink')->name('kitchen-sink');
 Route::group([
     'prefix' => 'layouts',
     'as' => 'layouts.'
     ], function(){
         Route::view('/list', 'demo-pages/list')->name('list');
+        Route::view('/show', 'demo-pages/show')->name('show');
 }); 
 
 Route::group([
@@ -66,7 +66,7 @@ function(){
         Route::view('/checkbox-toggles', 'styleguide/mixins/checkbox-toggles')->name('checkbox-toggles');
         Route::view('/checkbox-button-groups', 'styleguide/mixins/checkbox-button-groups')->name('checkbox-btn-groups');
    
-        Route::view('/navigation', 'styleguide/mixins/navigation')->name('navs');
+        Route::view('/menus', 'styleguide/mixins/menus')->name('menus');
         Route::view('/search-input', 'styleguide/mixins/search-inputs')->name('search-inputs');
         Route::view('/select-filters', 'styleguide/mixins/select-filters')->name('select-filters');
         Route::view('/tabs', 'styleguide/mixins/tabs')->name('tabs'); 

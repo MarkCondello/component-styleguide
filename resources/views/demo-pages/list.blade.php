@@ -1,5 +1,6 @@
 @extends('layouts.app', [
-    'bodyId' => "demo-pages",
+    'bodyId' => 'demo-pages',
+    'bgClass' => 'bg-off-white'
 ])
 
 @section('header')

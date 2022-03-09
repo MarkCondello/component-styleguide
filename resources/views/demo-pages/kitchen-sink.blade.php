@@ -2,10 +2,6 @@
 'bodyId' => "demo-pages",
 ])
 
-@section('header')
-@include('sections.logo-menu')
-@endsection
-
 @section('content')
 <div class="styleguide-reference">
     <aside>
@@ -32,7 +28,7 @@
         </menu>
     </aside>
     <section>
-        <h2>Styleguide Reference</h2>
+        <h2>Kitchen Sink</h2>
         <hr>
         <h3><a name="buttons">Buttons</a></h3>
         <div class="bg-whitest" style="padding: 1rem;">
