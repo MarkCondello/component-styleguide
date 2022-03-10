@@ -43,9 +43,9 @@
         <code-block code-content='2022-03-05,2022-03-12'></code-block>
         <p>With Vue implemenatations, the emitted input event will return a formatted date payload.</p>
         <small>single date items</small>
-        <code-block code-content='["2022-03-22"]'></code-block>
+        <code-block code-content='[{"formattedDate":"2022-02-28","name":"date","date":["28/02/2022","19/03/2022"]}]'></code-block>
         <small>date ranges</small>
-        <code-block code-content='["2022-03-22","2022-03-26"]'></code-block>
+        <code-block code-content='[{"formattedDate":["2022-02-28","2022-03-19"],"name":"date","date":["28/02/2022","19/03/2022"]}]'></code-block>
         <hr>
         <h3>Configuration options</h3>
         <table>
