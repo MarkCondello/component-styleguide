@@ -2,12 +2,31 @@
 
 @section('content')
 <div >
-    <h3>Rational</h3>
-    <p>Included in the styleguide is a palette of colours.</p>
+    <h3>Colours</h3>
+    <p>Included in the sass-lip npm package is a $preset-palette of colours.</p>
+    <p>By importing the helpers.scss file we can use the preset pallete or add our own to generate text and background colours woth the mixin provided.</p>
+    <code-block code-content='@\use "dcode/sass-lib/sass/admin-features/helpers" as *;
+@/include bg-text-colors($palette);'
+></code-block>
+
     <p>The primary colour is used for interactive elements, such as links and buttons. The secondary, success, warning,
         and danger colours are used to give more context to UI elements and actions.</p>
-    <p>This colour map is used for colour variations for various components like alerts, tags, tiles, table rows and badges.</p>
-    <p>All the colours are accesible with <code>.bg-COLOR</code> and <code>.text-COLOR</code> classes to provide background colour and text colour values respectively.</p>
+    <p>This $palette map can also is used in various components like alerts, tags, tiles, table rows and badges.</p>
+ <code-block code-content='$preset-palette: (
+    primary: #1779ba,
+    secondary: #767676,
+    success: #3adb76,
+    warning: #ffae00,
+    danger: #cc4b37,
+    whitest: #ffffff,
+    light-gray: #e6e6e6,
+    medium-gray: #cacaca,
+    med-dark-gray: #aaa,
+    dark-gray: #8a8a8a,
+    blackest: #0a0a0a,
+    off-white: #f8f8f8,
+);'></code-block>
+    <p>When including the bg-text-colors() mixin, all the colours within the map which is addded as a parameter are accesible with <code>.bg-COLOR</code> and <code>.text-COLOR</code> classes respectively.</p>
     <hr>
     <div class="demo">
         <div class="cols-of-150">
@@ -61,7 +80,7 @@
         </div>
     </div>
 
-    <code-block code-content=' <div class="cols-of-150">
+    <code-block code-content='<div class="cols-of-150">
     <div class="colour-block">
         <div class="bg-primary"></div>
         <p class="text-primary">Primary</p>
