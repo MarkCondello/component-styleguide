@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')->name('home');
-Route::view('reference', 'demo-pages/styleguide-reference')->name('reference');
-
+Route::view('kitchen-sink', 'demo-pages/kitchen-sink')->name('kitchen-sink');
 Route::group([
     'prefix' => 'layouts',
     'as' => 'layouts.'
     ], function(){
         Route::view('/list', 'demo-pages/list')->name('list');
+        Route::view('/show', 'demo-pages/show')->name('show');
 }); 
 
 Route::group([
@@ -66,7 +66,7 @@ function(){
         Route::view('/checkbox-toggles', 'styleguide/mixins/checkbox-toggles')->name('checkbox-toggles');
         Route::view('/checkbox-button-groups', 'styleguide/mixins/checkbox-button-groups')->name('checkbox-btn-groups');
    
-        Route::view('/navigation', 'styleguide/mixins/navigation')->name('navs');
+        Route::view('/menus', 'styleguide/mixins/menus')->name('menus');
         Route::view('/search-input', 'styleguide/mixins/search-inputs')->name('search-inputs');
         Route::view('/select-filters', 'styleguide/mixins/select-filters')->name('select-filters');
         Route::view('/tabs', 'styleguide/mixins/tabs')->name('tabs'); 
@@ -81,57 +81,83 @@ function(){
             //ToDo : list, show, edit etc
     });
     Route::get('api/table-demo', function(){
-        return (object) [
-            "data" => [
-                (object) [
-                    "job_number" => "123",
-                    "title"=> "This is the first",
-                    "client"=> "Joe Bloggs",
-                    "location"=> "Somewhere 123 Street",
-                    "amount"=> "N/A",
-                    "status"=> "Approved",
-                    "links"=> (object)[
-                        "show"=> (object)[
-                        "link"=> "#",
-                        "label"=> "View Job"
-                        ]
-                    ],
-                    "actions"=> (object)[
-                        "edit"=> (object)[
-                            "link"=> "#",
-                            "label"=> "Edit"
-                        ],
-                        "delete"=> (object)[
-                            "link"=> "#",
-                            "label"=> "Delete"
-                        ]
+        $items = [
+            (object) [
+                "job_number" => "123",
+                "title"=> "This is the first",
+                "client"=> "Joe Bloggs",
+                "location"=> "Somewhere 123 Street",
+                "amount"=> "N/A",
+                "status"=> "Approved",
+                "links"=> (object)[
+                    "show"=> (object)[
+                    "link"=> "#",
+                    "label"=> "View Job"
                     ]
                 ],
-                (object) [
-                    "job_number" => "234",
-                    "title"=> "This is the Second",
-                    "client"=> "Joe Doe",
-                    "location"=> "Something 321 Street",
-                    "amount"=> "33",
-                    "status"=> "In Progress",
-                    "links"=> (object)[
-                        "show"=> (object)[
+                "actions"=> (object)[
+                    "edit"=> (object)[
                         "link"=> "#",
-                        "label"=> "View Job"
-                        ]
+                        "label"=> "Edit"
                     ],
-                    "actions"=> (object)[
-                        "edit"=> (object)[
-                            "link"=> "#",
-                            "label"=> "Edit"
-                        ],
-                        "delete"=> (object)[
-                            "link"=> "#",
-                            "label"=> "Delete"
-                        ]
+                    "delete"=> (object)[
+                        "link"=> "#",
+                        "label"=> "Delete"
                     ]
                 ]
-            ]
+            ],
+            (object) [
+                "job_number" => "234",
+                "title"=> "This is the second",
+                "client"=> "Joe Doe",
+                "location"=> "Something 321 Street",
+                "amount"=> "33",
+                "status"=> "In Progress",
+                "links"=> (object)[
+                    "show"=> (object)[
+                    "link"=> "#",
+                    "label"=> "View Job"
+                    ]
+                ],
+                "actions"=> (object)[
+                    "edit"=> (object)[
+                        "link"=> "#",
+                        "label"=> "Edit"
+                    ],
+                    "delete"=> (object)[
+                        "link"=> "#",
+                        "label"=> "Delete"
+                    ]
+                ]
+            ],
+            (object) [
+                "job_number" => "333",
+                "title"=> "This is the third",
+                "client"=> "John Doe",
+                "location"=> "Park Way Drive",
+                "amount"=> "66",
+                "status"=> "Approved",
+                "links"=> (object)[
+                    "show"=> (object)[
+                    "link"=> "#",
+                    "label"=> "View Job"
+                    ]
+                ],
+                "actions"=> (object)[
+                    "edit"=> (object)[
+                        "link"=> "#",
+                        "label"=> "Edit"
+                    ],
+                    "delete"=> (object)[
+                        "link"=> "#",
+                        "label"=> "Delete"
+                    ]
+                ],
+            ],
+        ];
+
+        return (object) [
+            "data" => array_merge($items, $items, $items, $items, $items),
         ];
     })->name('api.table-demo');
 });
