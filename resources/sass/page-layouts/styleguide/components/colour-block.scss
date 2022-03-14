@@ -1,5 +1,9 @@
  @use '../../../config/palette.scss' as *;
+ @use 'dcode/sass-lib/sass/layouts.scss' as *;
 
+.cols-of-150 {
+    @include cols-of(150px, 1000px, 1rem);
+}
 .colour-block {
     border: 1px solid map-get($palette, "dark-grey");
     padding: 1rem;

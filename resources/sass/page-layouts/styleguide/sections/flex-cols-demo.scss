@@ -1,19 +1,15 @@
-@use '../../../preset/layouts.scss' as *;
-@use "../branding" as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
+@use "~/sass/config/variables.scss"as *;
+@use "~/sass/config/palette.scss"as *;
 
-#styleguide  {
-    .flex-cols {
-        @include flex-cols(sm);
-        @include flex-cols(md);
-        @include flex-cols(lg);
-        @include flex-cols(xl);
-        > div {
-            background-color: $dcode-turquoise;
-            border: 1px solid #fff;
-            color: #fff;
-            min-height: 100px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
+#styleguide {
+  @include flex-cols($columns, $breakpoints);
+  .flex-cols > div {
+    background-color: $dcode-turquoise;
+    border: 1px solid #fff;
+    color: #fff;
+    min-height: 100px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 }

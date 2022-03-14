@@ -1,15 +1,18 @@
 @extends('layouts.base')
 
 @section('body')
-<header>
-    @yield('header')
-</header>
-<main>
-    @yield('content')
-    @isset($slot)
-        {{ $slot }}
-    @endisset
-</main>
+@include('styleguide.menu')
+<section>
+    <header>
+        @yield('header')
+    </header>
+    <main>
+        @yield('content')
+        @isset($slot)
+            {{ $slot }}
+        @endisset
+    </main>
+</section>
 <modal></modal>
 <side-panel></side-panel>
 @endsection

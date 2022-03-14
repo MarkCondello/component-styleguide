@@ -1,5 +1,5 @@
-@use "../branding" as *;
-@use '../../../preset/layouts.scss' as *;
+@use "~/sass/config/palette.scss"as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
 
 #styleguide  {
     .six-by-three-grid {
@@ -11,7 +11,7 @@
         }
     }    
     .cols-of-200 {
-       @include cols-of(200px, 1rem, 1fr, 1000px);
+       @include cols-of(200px, 1000px, 1rem);
         > div {
             background-color: $dcode-turquoise;
             min-height: 100px;

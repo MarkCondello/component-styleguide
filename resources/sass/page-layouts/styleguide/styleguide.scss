@@ -1,15 +1,24 @@
-@use "./branding/"as *;
-@use "../../preset/"as *;
-@use "../../config/palette.scss"as *;
+@use "~/sass/config/palette.scss"as *;
 @use "~/sass/config/variables.scss"as *;
+@use "~/sass/config/mixins.scss"as *;
 
-@use 'dcode/sass-lib/sass/base.scss' as lib;
+@use 'dcode/sass-lib/sass/breakpoints.scss' as *;
+@use 'dcode/sass-lib/sass/layouts.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/helpers' as *;
+
+// #styleguide {
+//     // @include media-breakpoint-up('md', $breakpoints) {
+//     //     border: 2px solid grey;
+//     // }
+// }
 
 #styleguide #app{
     @include bg-text-colors($palette);
     margin: auto;
     max-width: 1440px;
-
+    .cols-of-50 {
+        @include cols-of(50px, 200px, 1rem);
+    }
     > header,
     > main {
         display: grid;
@@ -33,7 +42,6 @@
             }
         }
         > div {
-            // padding-right: 25px;
             display: grid;
             grid-template-columns: 1fr 230px;
             grid-template-rows: auto;
@@ -54,56 +62,8 @@
     }
     > main {
         min-height: 100vh;
-        // @include lib.pad-x(150px);
-
         aside {
-            padding-top: 30px;
-            ul {
-                @include reset-ul;
-            }
-            > ul > li {
-                padding-left: 0;
-                padding-right: 0;
-                margin: 0;
-                margin-bottom: 1.5rem;
-                > button {
-                    @include reset-btn;
-                    display: block;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-bottom: 0.25rem;
-                    padding: 0.5rem 0.75rem;
-                    text-align: left;
-                    text-transform: uppercase;
-                }
-                a,
-                button {
-                    color: $sidebar-menu-color;
-                }
-                > ul {
-                    background-color: transparent;
-                    margin-bottom: 1rem;
-                    opacity: 1;
-                    height: auto;
-                    > li {
-                        text-align: left;
-                    }
-                    a {
-                        border: 1px solid transparent;
-                        display: block;
-                        font-size: 14px;
-                        padding: .5rem .75rem;
-                        text-decoration: none;
-                        width: 100%;
-                        &.active,
-                        &:hover {
-                            background-color: $white;
-                            border: 1px solid $main-bg;
-                            color: $top-menu-color;
-                        }
-                    }
-                }
-            }
+            @include aside-menu;
         }
         > aside {
             background-color: $sidebar-bg;
@@ -116,14 +76,12 @@
                     border-right: none;
                 }
             }
-
         }
         > section {
             display: grid;
             grid-template-columns: 1fr 230px;
             grid-template-rows: auto;
             grid-template-areas: "article aside";
-            // padding-right: 25px;
             > article {
                 padding: 3rem 80px;
                 hr:not(.actions hr) {
@@ -149,6 +107,9 @@
                 > ul {
                     border-left: 1px solid $separator;
                     padding-left: 1rem;
+                    &.fixed {
+                        position: fixed;
+                    }
                 }
             }
         }
