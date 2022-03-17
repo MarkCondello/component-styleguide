@@ -268,6 +268,7 @@
       ],
     ];@endphp
     <base-table get-url="{{ route('styleguide.api.table-demo') }}" :fields="{{json_encode($fields)}}"></base-table>
+    <!-- ToDo: Need a demo with sortable / searchable paginated results -->
   </div>
   <h3>Configuration options</h3>
   <table>
