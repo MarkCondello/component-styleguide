@@ -1,9 +1,9 @@
-<header class="refine">
+<header>
     <div class="form">
-        <div>
+        <!-- <div>
             <a href="#" class="button white">View Tasks</a>
             <a href="#" class="button white">Add New Team</a>
-        </div>
+        </div> -->
         <label for="day" class="checkbox-btn btn-whitest">
             <input type="checkbox" id="day" />
             <span>Day</span>

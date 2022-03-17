@@ -1,5 +1,6 @@
 @use 'dcode/sass-lib/sass/layouts.scss' as *;
 @use 'dcode/sass-lib/sass/admin-features/helpers.scss' as *;
+@use 'dcode/sass-lib/sass/admin-features/mixins/cards' as *;
 @use 'dcode/sass-lib/sass/layouts.scss' as *;
 
 @use '~/sass/config/variables.scss' as *;
@@ -28,6 +29,7 @@ html {
         section{
             width: 100%;
             > header {
+                background-color: map-get($palette , 'whitest');
                 padding: 1rem 0;
                 > div {
                     @include space-between-center;
@@ -44,34 +46,39 @@ html {
                     }
                 }
             }
+           
             > main {
                 min-height: 100vh;
                 padding: 1rem 0;
                 > div {
                     margin: auto;
                     max-width: $body-max-width;
-                    header.refine {
+                    > header {
                         @include space-between-center;
                         margin-bottom: 2rem;
-                        .form  {
-                            @include space-between;
-                            > * {
-                                margin-right: .5rem;
+                    }
+                    > form {
+                        max-width: 50%;
+                        > fieldset {
+                            @include cards($card-bg, $card-border-radius, $card-header-color, $card-header-f-size);
+                            padding: 1.25rem 1.5rem;
+                            margin-bottom: 2rem;
+                        }
+                        > fieldset > div,
+                        > div {
+                            display: grid;
+                            grid-template-columns: 200px 1fr;
+                            grid-gap: .5rem;
+                            .stretch {
+                                grid-column: 1 / span 2;
                             }
-                            .checkbox-btn span {
-                                padding: 0.65rem 1rem;
+                            > label {
+                                color: map-get($palette, 'dark-gray');
+                                margin: .75rem 0 0;
                             }
-                            .checkbox-btn,
-                            p {
-                                margin-bottom: 0;
-                            }
-                            &:first-of-type {
-                                > div {
-                                    margin-right: 2rem;
-                                }
-                            }
-                            .select-filter-input p {
-                                background-color: map-get($palette, "whitest");
+                            > small {
+                                grid-column-start: 2;
+                                grid-column-end: 3;
                             }
                         }
                     }

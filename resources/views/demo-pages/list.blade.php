@@ -60,6 +60,7 @@
     <p><br></p>
     <h3>CSS settings</h3>
     <code-block code-content='@\use "dcode/sass-lib/sass/layouts.scss" as *;
+@\use "dcode/sass-lib/sass/admin-features/mixins/cards" as *;
 @\use "dcode/sass-lib/sass/admin-features/helpers.scss" as *;
 @\use "dcode/sass-lib/sass/layouts.scss" as *;
 
@@ -99,7 +100,7 @@ margin: 0;
             > div {
                 margin: auto;
                 max-width: $body-max-width;
-                header.refine {
+                > header {
                     @\include space-between-center;
                     margin-bottom: 2rem;
                     .form  {
@@ -124,11 +125,35 @@ margin: 0;
                         }
                     }
                 }
+                > form {
+                    max-width: 50%;
+                    > fieldset {
+                        @\include cards($card-bg, $card-border-radius, $card-header-color, $card-header-f-size);
+                        padding: 1.25rem 1.5rem;
+                        margin-bottom: 2rem;
+                    }
+                    > fieldset > div,
+                    > div {
+                        display: grid;
+                        grid-template-columns: 200px 1fr;
+                        grid-gap: .5rem;
+                        .stretch {
+                            grid-column: 1 / span 2;
+                        }
+                        > label {
+                            color: map-get($palette, "dark-gray");
+                            margin: .75rem 0 0;
+                        }
+                        > small {
+                            grid-column-start: 2;
+                            grid-column-end: 3;
+                        }
+                    }
+                }
             }
         }
     }
-}
-'></code-block>
+}'></code-block>
     <p><br></p>
     <h3>HTML markup</h3>
     <code-block code-content='<div id="app">
@@ -161,14 +186,20 @@ margin: 0;
         </header>
         <main>
             <div>
-                <header class="refine">
+                <header>
                     <div class="form">
-                        <div><a href="#" class="button white">View Tasks</a> <a href="#" class="button white">Add New
-                                Team</a></div> <label for="day" class="checkbox-btn btn-whitest"><input type="checkbox"
-                                id="day"> <span>Day</span></label> <label for="week"
-                            class="checkbox-btn btn-whitest"><input type="checkbox" id="week"> <span>Week</span></label>
-                        <label for="month" class="checkbox-btn btn-whitest"><input type="checkbox" id="month">
-                            <span>Month</span></label>
+                        <label for="day" class="checkbox-btn btn-whitest">
+                            <input type="checkbox" id="day">
+                            <span>Day</span>
+                        </label>
+                        <label for="week" class="checkbox-btn btn-whitest">
+                            <input type="checkbox" id="week">
+                            <span>Week</span>
+                        </label>
+                        <label for="month" class="checkbox-btn btn-whitest">
+                            <input type="checkbox" id="month">
+                            <span>Month</span>
+                        </label>
                     </div>
                     <div class="form">
                         <div class="select-filter-input">

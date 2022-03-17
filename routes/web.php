@@ -20,7 +20,7 @@ Route::group([
     'as' => 'layouts.'
     ], function(){
         Route::view('/list', 'demo-pages/list')->name('list');
-        Route::view('/show', 'demo-pages/show')->name('show');
+        Route::view('/edit', 'demo-pages/edit')->name('edit');
 }); 
 
 Route::group([
@@ -74,12 +74,6 @@ function(){
         Route::view('/tiles', 'styleguide/mixins/tiles')->name('tiles');
     });
 
-    Route::group([
-        'prefix' => 'layouts',
-        'as' => 'layouts.'
-        ], function(){
-            //ToDo : list, show, edit etc
-    });
     Route::get('api/table-demo', function(){
         $items = [
             (object) [
@@ -157,7 +151,7 @@ function(){
         ];
 
         return (object) [
-            "data" => array_merge($items, $items, $items, $items, $items),
+            "data" => array_merge($items, $items, $items),
         ];
     })->name('api.table-demo');
 });

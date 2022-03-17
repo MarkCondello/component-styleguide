@@ -99,12 +99,9 @@
       <li>
           <button>Layouts</button>
           <ul>
-              <li><a href="{{ route('layouts.list') }}" @if(request()->is('layouts/list')) class="active" @endif>List</a></li>
-              {{-- ToDo --}}
-              <li><a href="#">Show</a></li>
-              {{-- <li><a href="{{ route('layouts.list') }}">Show</a></li> --}}
-              <li><a href="#">Edit</a></li>
-          </ul>
+                <li><a href="{{ route('layouts.list') }}" @if(request()->is('layouts/list')) class="active" @endif>List</a></li>
+                <li><a href="{{ route('layouts.edit') }}" @if(request()->is('layouts/edit')) class="active" @endif>Edit</a></li>
+           </ul>
       </li>  
       <li><a href="{{ route('kitchen-sink') }}">Kitchen Sink</a></li>
   </ul>
