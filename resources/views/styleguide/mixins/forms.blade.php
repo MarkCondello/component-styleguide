@@ -8,6 +8,18 @@
         <p><code>&lt;fieldset&gt;</code> tags can also be used for a container of these div containers.</p> 
         <p>Labels should not wrap inputs and a for attribute needs to be added to the label and the associated id added to the input.</p>
         <p>The only exception for this rule is for the checkbox and radio input elements. Those inputs can have a <code>label</code> container with a class of <code>.checkbox</code> or <code>.radio</code> to provide the custom styles to the associated element.</p>
+        <p>An component named &lt;x-field-wrapper&gt; is available to include the markup for the container div, the label and the error messages and state.</p>
+        <p>This component takes a fieldname and a labelName as props. See below code example for more details.</p>
+   
+<code-block code-content='//field-wrapper.blade.php
+
+<div @\error($fieldName)class="form-error"@\enderror>
+    <label for="{\{ $fieldName }\}" @\isset($labelClass) class="{\{ $labelClass }\}" @\endisset>{\{ $labelName }\}</label>
+    {\{ $slot ?? null }\}
+    @\error($fieldName)
+    <small><span>⚠</span>{\{ $message }\}</small>
+    @\enderror
+</div>'></code-block>
         <hr>
         <h3>HTML Demo</h3>
         <div class="demo">
@@ -59,6 +71,7 @@
         <h3>Error States</h3>
         <p>When form submissions does not pass validation, a generic error message should be presented to the user. In this example an alert component is added above the <code>form</code> element. Fields with an error should include the <code>.form-error</code> css class to the containing <code>div</code> tag.</p>
         <p>If there are errors for a form, the submit button should also be disabled until those errors are resolved.</p>
+        <p>Error states are included in the &lt;x-field-wrapper&gt; component mentioned previously.</p>
         <hr>
         <h3>HTML Demo</h3>
         <div class="demo">
@@ -90,5 +103,26 @@
                 </footer>
             </form>
         </div>
+        <hr>
+        <h3>CSS settings</h3>
+        <p>The below are the standard settings used for styling forms and inputs.</p>
+        <code-block code-content='@\use "dcode/sass-lib/sass/admin-features/mixins/forms.scss: as *;
+@use "~/sass/config/variables.scss" as *;
+
+#{$inputs}{
+    @\include input-common($input-border, $input-radius, $input-padding, $placeholder-color, $input-bg);
+}
+
+form,
+.form {
+    @\include forms($form-error-color);
+}
+
+/* 
+// the $inputs variable is required to style the genertic form elements.
+
+$inputs: "[type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="phone"], [type="color"], select, textarea";
+*/'
+></code-block>
     </div>
 @endsection
