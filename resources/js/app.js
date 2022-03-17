@@ -3,7 +3,6 @@ import Vue from "vue";
 import WindowPal from "./lib/WindowPal.js";
 import Tabs from "./lib/Tabs.js";
 import SelectFilter from "./lib/SelectFilter.js";
-//window.Vue = Vue;
 import BaseTable from "./vue/components/UI/BaseTable";
 
 import vClickOutside from "v-click-outside";
@@ -74,10 +73,14 @@ window.onload = (event) => {
             });
         });
     }
-    
  };
 
 Vue.use(vClickOutside);
 new Vue({
-    el: "#app"
+    el: "#app",
+    data() {
+        return {
+          csrf_token: document.head.querySelector('meta[name="csrf-token"]').content,
+        }
+      },
 });
