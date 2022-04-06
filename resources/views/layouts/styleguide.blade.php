@@ -3,7 +3,7 @@
 @section('body')
 <header>
     <aside>
-        <img src="{{ asset('/imgs/logos/dcode.svg') }}" alt="Dcode logo" width="35"/>
+        <img src="{{ asset('/imgs/logos/logo.svg') }}" alt="Styleguide logo" width="30"/>
         <h1>Styleguide.<br>DcodeGroup</h1>
     </aside>
     <div>

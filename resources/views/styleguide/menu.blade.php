@@ -1,13 +1,13 @@
 <aside>
-  <ul>
+  <ul style="opacity: 0;">
       <li>
           <button>Dcode Preset</button>
           {{-- ToDo: Add details about the Dcode Preset ron. --}}
       </li>
-      <li>
+      <li @if(request()->is('globals/*')) class="active" @endif>
           <button>Globals</button>
           <ul>
-              <li>
+            <li>
                   <a href="{{ route('styleguide.globals.colours') }}" @if(request()->is('globals/colours')) class="active" @endif>Colours</a>
               </li>
               <li>
@@ -24,10 +24,10 @@
               </li>
           </ul>
       </li>
-      <li>
+      <li @if(request()->is('components/*')) class="active" @endif>
           <button>Components</button>
           <ul>
-              <li>
+            <li>
                   <a href="{{ route('styleguide.components.datepicker') }}" @if(request()->is('components/datepicker')) class="active" @endif>Datepicker</a>
               </li>
               <li>
@@ -45,7 +45,7 @@
           
           </ul>
       </li>
-      <li>
+      <li @if(request()->is('mixins/*')) class="active" @endif>
           <button>Mixins</button>
           <ul>
               <li>
@@ -96,13 +96,18 @@
            
           </ul>
       </li>
-      <li>
+      <li @if(request()->is('layouts/*')) class="active" @endif>
           <button>Layouts</button>
           <ul>
-                <li><a href="{{ route('layouts.list') }}" @if(request()->is('layouts/list')) class="active" @endif>List</a></li>
+            <li><a href="{{ route('layouts.list') }}" @if(request()->is('layouts/list')) class="active" @endif>List</a></li>
                 <li><a href="{{ route('layouts.edit') }}" @if(request()->is('layouts/edit')) class="active" @endif>Edit</a></li>
            </ul>
       </li>  
-      <li><a href="{{ route('kitchen-sink') }}">Kitchen Sink</a></li>
+      <li @if(request()->is('kitchen-sink')) class="active" @endif>
+            <button>References</button>
+            <ul>
+                <li><a href="{{ route('kitchen-sink') }}" @if(request()->is('kitchen-sink')) class="active" @endif>Kitchen Sink</a></li>
+            </ul>
+      </li>
   </ul>
 </aside>

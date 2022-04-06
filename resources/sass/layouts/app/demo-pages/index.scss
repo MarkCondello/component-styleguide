@@ -23,11 +23,17 @@ html {
             @include aside-menu;
             background-color: $sidebar-bg;
             border-right: 1px solid #E1E7EC;
-            padding-left: 10px;
-            padding-top: 10px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            > ul > li {
+                @include dropdown-menu;
+            }
         }
         section{
             width: 100%;
+            padding: 2rem;
             > header {
                 background-color: map-get($palette , 'whitest');
                 padding: 1rem 0;

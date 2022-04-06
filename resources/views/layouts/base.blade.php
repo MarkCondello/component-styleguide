@@ -9,7 +9,7 @@
             <title>{{ config('app.name') }}</title>
         @endif
         <!-- Favicon -->
-		<link rel="shortcut icon" href="{{ url(asset('/imgs/logos/dcode.svg')) }}" type="image/svg">
+		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}" type="image/ico">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
  

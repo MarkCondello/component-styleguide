@@ -15,19 +15,19 @@
     padding-top: 30px;
     ul {
         @include reset-ul;
+        transition: opacity .25s;
     }
     > ul > li {
-        padding-left: 0;
+        padding-left: 1rem;
         padding-right: 0;
         margin: 0;
-        margin-bottom: 1.5rem;
         > button {
             @include reset-btn;
             display: block;
             font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 0.25rem;
-            padding: 0.5rem 0.75rem;
+            font-size: 12px;
+            margin-bottom: 1rem;
+            padding: 0 0.75rem;
             text-align: left;
             text-transform: uppercase;
         }
@@ -38,23 +38,70 @@
         > ul {
             background-color: transparent;
             margin-bottom: 1rem;
-            opacity: 1;
-            height: auto;
             > li {
                 text-align: left;
             }
             a {
-                border: 1px solid transparent;
                 display: block;
                 font-size: 14px;
-                padding: .5rem .75rem;
+                padding: 0 .75rem 0 1.5rem;
                 text-decoration: none;
                 width: 100%;
                 &.active,
                 &:hover {
-                    background-color: $white;
-                    border: 1px solid $main-bg;
                     color: $top-menu-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@mixin dropdown-menu {
+    &.has-children {
+        background-color: transparent;
+        margin: 0;
+        padding-left: 1rem;
+        transition: all .5s;
+        button {
+            position: relative;
+            width: 100%;
+            &:after {
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 2px;
+                background-image: url('/imgs/icons/chevron-down.svg');
+                background-size: cover;
+                transform: rotate(0);
+                transition: transform .5s;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        ul {
+            height: 0;
+            margin: 0;
+            min-height: 0;
+            opacity: 0;
+            transition: all .5s;
+            li,
+            li a {
+                pointer-events: none;
+            }
+        }
+        &.active {
+            background-color: #EBF3FF;
+            margin: 1rem 0;
+            padding: 1.5rem 0 1.5rem 1rem;
+            button {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+            ul {
+                li a {
+                    pointer-events: visible;
                 }
             }
         }

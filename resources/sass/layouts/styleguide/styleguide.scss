@@ -6,109 +6,102 @@
 @use 'dcode/sass-lib/sass/layouts.scss' as *;
 @use 'dcode/sass-lib/sass/admin-features/helpers' as *;
 
-// #styleguide {
-//     // @include media-breakpoint-up('md', $breakpoints) {
-//     //     border: 2px solid grey;
-//     // }
-// }
 
-#styleguide #app{
-    @include bg-text-colors($palette);
-    margin: auto;
-    max-width: 1440px;
-    .cols-of-50 {
-        @include cols-of(50px, 200px, 1rem);
-    }
-    > header,
-    > main {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "aside content";
-    }
-    > header {
-        border-bottom: 1px solid #DFE5EB;
-        padding: 1rem 0;
-        > aside {
-            @include align-center;
-            gap: 1rem;
-            padding-left: 25px;
-            h1 {
-                font-size: 1rem;
-                line-height: 1;
-                margin: 0;
-                text-transform: uppercase;
-                font-weight: 700;
-            }
+#styleguide {
+    margin: 0;
+    #app{
+        @include bg-text-colors($palette);
+        margin: auto;
+        max-width: 1440px;
+        .cols-of-50 {
+            @include cols-of(50px, 200px, 1rem);
         }
-        > div {
+        > header,
+        > main {
             display: grid;
-            grid-template-columns: 1fr 230px;
+            grid-template-columns: 300px 1fr;
             grid-template-rows: auto;
-            grid-template-areas: "menu search";
-            menu {
-                border-left: 1px solid $separator;
-                border-right: 1px solid $separator;
-                margin:0;
-                ul {
-                    li {
-                        a {
-                            color: $top-menu-color;
+            grid-template-areas: "aside content";
+        }
+        > header {
+            border-bottom: 1px solid #DFE5EB;
+            padding: 1.25rem 0;
+            > aside {
+                @include align-center;
+                gap: 1rem;
+                padding-left: 25px;
+                h1 {
+                    font-size: 1rem;
+                    line-height: 1;
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+            > div {
+                display: grid;
+                grid-template-columns: 1fr 230px;
+                grid-template-rows: auto;
+                grid-template-areas: "menu search";
+                menu {
+                    border-left: 1px solid $separator;
+                    border-right: 1px solid $separator;
+                    margin:0;
+                    ul {
+                        li {
+                            a {
+                                color: $top-menu-color;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    > main {
-        min-height: 100vh;
-        aside {
-            @include aside-menu;
-        }
-        > aside {
-            background-color: $sidebar-bg;
-            border-right: 1px solid #E1E7EC;
-            padding-left: 20px;
-            > ul > li > ul > li a {
-                border-right: none;
-                &.active,
-                &:hover { 
-                    border-right: none;
-                }
-            }
-        }
-        > section {
-            display: grid;
-            grid-template-columns: 1fr 230px;
-            grid-template-rows: auto;
-            grid-template-areas: "article aside";
-            > article {
-                padding: 3rem 80px;
-                hr:not(.actions hr) {
-                    background-color: #DFE5EB;
-                    border: none;
-                    height: 1px;
-                    margin: 3rem 0;
-                }
-                .demo {
-                    border: 5px solid $dcode-grey;
-                    margin-bottom: 2rem;
-                    padding: 1.5rem;
-                    pre {
-                        margin: 0;
-                        code {
-                            font-family: monospace;
-                            font-size: 1rem;
-                        }
-                    }
-                }
+        > main {
+            min-height: 100vh;
+            aside {
+                @include aside-menu;
             }
             > aside {
-                > ul {
-                    border-left: 1px solid $separator;
-                    padding-left: 1rem;
-                    &.fixed {
-                        position: fixed;
+                background-color: $sidebar-bg;
+                border-right: 1px solid #E1E7EC;
+                > ul > li {
+                    @include dropdown-menu;
+                }
+            }
+            > section {
+                display: grid;
+                grid-template-columns: 1fr 230px;
+                grid-template-rows: auto;
+                grid-template-areas: "article aside";
+                > article {
+                    padding: 3rem 80px;
+                    hr:not(.actions hr) {
+                        background-color: #DFE5EB;
+                        border: none;
+                        height: 1px;
+                        margin: 3rem 0;
+                    }
+                    .demo {
+                        border: 5px solid $dcode-grey;
+                        margin-bottom: 2rem;
+                        padding: 1.5rem;
+                        pre {
+                            margin: 0;
+                            code {
+                                font-family: monospace;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                > aside {
+                    > ul {
+                        border-left: 1px solid $separator;
+                        // padding-left: 1rem;
+                        &.fixed {
+                            position: fixed;
+                        }
                     }
                 }
             }
