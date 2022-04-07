@@ -9,6 +9,13 @@ table:not(.mx-table-date){
         $palette,
         $table-header-color
     );
+    tbody {
+        tr {
+            td {
+                vertical-align: top;
+            }
+        }
+    }
 }
 
 // .financial-totals {

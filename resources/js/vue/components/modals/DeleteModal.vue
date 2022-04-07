@@ -1,26 +1,27 @@
 <template>
     <section>
         <header>
-            <h2 v-html="header"></h2>
+            <h2 v-html="header" />
         </header>
-        <p  v-text="content"></p>
+        <p v-text="content" />
         <footer>
-            <button @click="$emit('confirm')" class="button success">Yes delete</button>
-            <button @click="$emit('closeModal')" class="button -hollow">Cancel</button> 
+            <button @click="handleConfirm" class="button success">Yes delete</button>
+            <button @click="$emit('closeModal')" class="button -hollow">Cancel</button>
         </footer>
     </section>
 </template>
-
 <script>
 export default {
     props: ['header', 'content'],
-
-    data(){
+    data() {
         return {
-            header: this.$attrs.header,
-            content: this.$attrs.content,
+            foo: 'bazz'
         }
     },
+    methods: {
+        handleConfirm (){
+            this.$emit('confirm', {foo: this.foo})
+        }
+    }
 }
- 
 </script>

@@ -56,14 +56,14 @@
 {{-- <p>A JSON array of objects with an id, and label prop field value like ('title', 'name') is required from the search endpoint.</p> --}}
         <code-block code-content='[
 {
-"id": 1,
-"title": "delectus aut autem",
-"completed": false
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
 },
 {
-"id": 2,
-"title": "quis ut nam facilis et officia qui",
-"completed": false
+  "id": 2,
+  "title": "quis ut nam facilis et officia qui",
+  "completed": false
 },
 ...
 '></code-block>
@@ -81,7 +81,7 @@
             <tr>
               <td>searchUrl</td>
               <td>String</td>
-              <td>This component takes a required searchUrl prop which is an endpoint to a resource which returns a JSON array of objects. See above for the expected response format.</td>
+              <td>This component takes a required searchUrl prop which is an endpoint to a resource which returns a JSON array of objects. See above for the expected data format.</td>
             </tr>
             <tr>
               <td>name</td>
@@ -91,7 +91,7 @@
             <tr>
               <td>value</td>
               <td>String | Array | Object</td>
-              <td>The value type passed into the component depends on what is expected to be returned eg(and object, and id or an array ) and if the component is set to multiple (array).</td>
+              <td>The value type passed into the component depends on what is expected to be returned eg(an object, an id or an array ). If the component is set to multiple the value must be an array.</td>
             </tr>
             <tr>
               <td>placeholder</td>

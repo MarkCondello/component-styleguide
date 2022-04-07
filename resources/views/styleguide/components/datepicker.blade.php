@@ -43,29 +43,37 @@
         <code-block code-content='2022-03-05,2022-03-12'></code-block>
         <p>With Vue implemenatations, the emitted input event will return a formatted date payload.</p>
         <small>single date items</small>
-        <code-block code-content='[{"formattedDate":"2022-02-28","name":"date","date":["28/02/2022","19/03/2022"]}]'></code-block>
+        <code-block code-content='[{
+  "formattedDate":"2022-02-28",
+  "name":"date",
+  "date":["28/02/2022","19/03/2022"]
+}]'></code-block>
         <small>date ranges</small>
-        <code-block code-content='[{"formattedDate":["2022-02-28","2022-03-19"],"name":"date","date":["28/02/2022","19/03/2022"]}]'></code-block>
+        <code-block code-content='[{
+  "formattedDate":["2022-02-28","2022-03-19"],
+  "name":"date",
+  "date":["28/02/2022","19/03/2022"]
+}]'></code-block>
         <hr>
         <h3>Configuration options</h3>
         <table>
           <thead>
             <tr>
               <th>Option</th>
-              <th width="180">Values</th>{{-- what type we need --}}
-              <th>Comment</th>{{-- explanation for what it does, is required etc --}}
+              <th width="180">Values</th>
+              <th>Comment</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>isFormInput</td>
               <td>Boolean (default: false)</td>
-              <td>Used for PHP forms.</td>
+              <td>Used for PHP forms by including a hidden input with the formatted ISO date value.</td>
             </tr>
             <tr>
               <td>name</td>
               <td>String</td>
-              <td>This prop adds the name attribute to the hidden input for PHP forms.</td>
+              <td>This prop adds the name attribute to the hidden input for PHP forms. It also is used for a ref to the input.</td>
             </tr>
             <tr>
               <td>value</td>
@@ -87,16 +95,39 @@
               <td>Boolean (default: false)</td>
               <td>Sets the datepicker attribute to disabled.</td>
             </tr>
+            <tr>
+              <td>placeholder</td>
+              <td>String (default: null)</td>
+              <td>Sets the datepicker placeholder text.</td>
+            </tr>
           </tbody>
         </table>
         <hr>
         <h3>CSS settings</h3>
         <p>The vue2-datepicker package has its own stylesheet. The below are the standard settings included.</p>
-        <code-block code-content='$default-color: $black;
-$primary-color: $primary; 
-@import "~vue2-datepicker/scss/index.scss";'
-></code-block>
+        <code-block code-content='@\use "../../config/palette.scss" as *;
+@\use "../../config/variables.scss" as *;
+@\use "dcode/sass-lib/sass/admin-features/mixins/forms.scss"as *;
 
+$\default-color: map-get($palette, "blackest");
+$\primary-color: map-get($palette, "primary");
+
+@\import "~vue2-datepicker/scss/index.scss";
+
+div.mx-datepicker {
+    width: 100%;
+    .mx-input-wrapper {
+        .mx-input {
+            @\include input-common($input-border, $input-radius, $input-padding, $placeholder-color);
+            box-shadow: none;
+            color: map-get($palette, "blackest");
+            height: auto;
+            line-height: 1;
+        }
+    }
+}'
+        
+></code-block>
     </div>
 @endsection
 
