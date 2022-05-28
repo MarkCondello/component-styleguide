@@ -1,7 +1,7 @@
 <aside>
   <ul style="opacity: 0;">
       <li>
-          <button>Dcode Preset</button>
+          <button>Styleguide</button>
           {{-- ToDo: Add details about the Dcode Preset ron. --}}
       </li>
       <li @if(request()->is('globals/*')) class="active" @endif>
