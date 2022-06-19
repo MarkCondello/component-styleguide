@@ -4,7 +4,7 @@
 <header>
     <aside>
         <img src="{{ asset('/imgs/logos/logo.svg') }}" alt="Styleguide logo" width="30"/>
-        <h1>Styleguide.<br>DcodeGroup</h1>
+        <h1>Styleguide</h1>
     </aside>
     <div>
         {{-- ToDo: Add top menu and global search --}}

@@ -1,6 +1,6 @@
 <div>
     <h1>
-        <img src="{{ asset('/imgs/logos/dcode.svg') }}" alt="Dcode logo" width="40"/>
+        <img src="{{ asset('/imgs/logos/logo.svg') }}" alt="Styleguide logo" width="30"/>
         <span>Project Name</span>
     </h1>
     <nav>
