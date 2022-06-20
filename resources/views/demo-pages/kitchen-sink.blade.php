@@ -20,6 +20,9 @@
             <li><a href="#modals">Modals</a></li>
             <li><a href="#side-panels">Side Panels</a></li>
             <li><a href="#date-pickers">Date Pickers</a></li>
+
+
+            <li><a href="#charts">Charts</a></li>
         </ul>
     </li>
 </ul>
@@ -586,5 +589,14 @@
             <h3><a name="date-pickers">Vue Date Pickers</a></h3>
             <v-date-picker name="due_date" value="{{ Carbon\Carbon::now() }}"></v-date-picker>
         </div>
+        
+        
+        <hr>
+        <div>
+            <h3><a name="charts">Charts</a></h3>
+            <planet-chart></planet-chart>
+        </div>
+        <hr>
+      
     </section>
  @endsection

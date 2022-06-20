@@ -13,6 +13,9 @@ import SidePanel from "./vue/components/UI/SidePanel.vue"
 import SidePanelJobCreate from "./vue/styleguide/SidePanelJobCreate.vue"
 import VTable from "./vue/components/UI/VTable.vue"
 import VDatePicker from "./vue/components/UI/VDatePicker.vue"
+
+import PlanetChart from "./vue/components/UI/PlanetChart.vue"
+
 import MultiselectWrapper from '@dcodegroup-au/vue-multiselect/MultiselectWrapper.vue'
 import DatepickerWrapper from '@dcodegroup-au/vue-datepicker/DatepickerWrapper.vue'
 
@@ -29,6 +32,9 @@ Vue.component("Modal", Modal)
 Vue.component("DeleteModal", DeleteModal)
 Vue.component("DeleteModalTrigger", DeleteModalTrigger)
 Vue.component("VDatePicker", VDatePicker)
+
+Vue.component("PlanetChart", PlanetChart)
+
 Vue.component("VTable", VTable)
 Vue.component("BaseTable", BaseTable)
 Vue.component("SidePanel", SidePanel)
